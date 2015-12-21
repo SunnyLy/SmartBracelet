@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_result_show"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:padding="@dimen/dimens15">
+
+    <TextView
+        android:id="@+id/tv_test_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_my_bloothpressure_result"
+        android:textColor="@color/common_black"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/tv_test_result_analyse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens5"
+        android:text="@string/user_my_bloothpressure_result_analyse"
+        android:textColor="@color/common_text_color"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/tv_health_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens15"
+        android:text="@string/user_my_bloothpressure_health_title"
+        android:textColor="@color/common_black"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/tv_health_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens15"
+        android:text="@string/user_my_bloothpressure_health_detail"
+        android:textColor="@color/common_text_color"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/result_attetion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens15"
+        android:textSize="@dimen/textSize12"
+        android:text="@string/user_my_bloothpressure_tips" />
+
+</LinearLayout>

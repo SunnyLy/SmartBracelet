@@ -3,10 +3,13 @@ package com.smartbracelet.sunny.ui.fragment.checkprj;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.internal.widget.ViewUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.het.common.callback.ICallback;
@@ -31,6 +34,7 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
 import lecho.lib.hellocharts.model.Axis;
 import lecho.lib.hellocharts.model.AxisValue;
@@ -55,6 +59,14 @@ public class BloothPressureFragment extends BaseFragment {
     TextView mBloodResult;
     @InjectView(R.id.blooth_pressure_time)
     TextView mBloodTestTime;
+
+    @InjectView(R.id.layout_result)
+    LinearLayout mLayoutResult;
+    @InjectView(R.id.indicate_arrow)
+    ImageView mArrow;
+    @InjectView(R.id.test_result_show)
+    LinearLayout mResultShow;
+    private boolean isUp = true;
 
     private String mTestValue;
     private String mTestTime;
@@ -114,6 +126,7 @@ public class BloothPressureFragment extends BaseFragment {
         return view;
     }
 
+
     private void initParams() {
         mState.setImageResource(R.mipmap.icon_my_bloothpressure_step);
         mTestResult.setImageResource(R.mipmap.icon_my_bloothpressure_result);
@@ -152,6 +165,26 @@ public class BloothPressureFragment extends BaseFragment {
     public void onEventMainThread(BloothPressureEvent event) {
         Object object = event.object;
         parseJsonObject(object);
+    }
+
+    @OnClick({R.id.layout_result})
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.layout_result:
+
+                if (isUp) {
+                    mArrow.setImageResource(R.mipmap.icon_indicator_arrow_down);
+                    mResultShow.setVisibility(View.VISIBLE);
+                    isUp = false;
+                } else {
+                    mArrow.setImageResource(R.mipmap.icon_indicator_arrow_up);
+                    mResultShow.setVisibility(View.GONE);
+                    isUp = true;
+                }
+
+                break;
+        }
     }
 
     public void onEventMainThread(BaseEvent event) {

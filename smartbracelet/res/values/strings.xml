@@ -100,6 +100,14 @@
     <string name="user_my_step">我的运动计步</string>
     <string name="user_my_tired">我的及时测量结果</string>
     <string name="user_my_emotion">我的情绪</string>
+    <string name="user_my_bloothpressure_result">您的血压偏低</string>
+    <string name="user_my_bloothpressure_result_analyse">病情轻微症状可有：头晕、头痛、食欲不振、疲劳、脸色苍白等；
+        严重症状包括：直立性眩晕、四肢冷、心悸、呼吸困难、需长期卧床。</string>
+    <string name="user_my_bloothpressure_health_title">健康小贴士</string>
+    <string name="user_my_bloothpressure_health_detail"> 注意: 饮食 低盐、低脂、低胆固醇、低热量的饮食，以植物油为主，
+        减少含饱和脂肪酸的肥肉或肉类制品,多进食高维生素的食物，如蔬菜、水果、新鲜乳类。</string>
+    <string name="user_my_bloothpressure_tips">\t\t本产品通过检测动态血压趋势的方式统计生物节律 , 以帮助人们更健康的生活 , 不能作为任何诊断相关的依据 .
+        注 : 动态血压与医学诊断使用的诊室血压并非同一个概念 。</string>
 
     <!--我的呼吸-->
     <string name="my_breath_test_state">测试状态</string>

@@ -50,7 +50,7 @@ public class SplashActivity extends BaseActivity {
 
     private void redirectTo() {
         LogUtils.e("notFirstStart:" + AppApplication.isFirstStart());
-        if (!AppApplication.isFirstStart()) {
+        if (AppApplication.isFirstStart()) {
             GuiderActivity.startGuiderActivity(mContext);
         } else {
             MainActivity.startMainActivity(mContext);

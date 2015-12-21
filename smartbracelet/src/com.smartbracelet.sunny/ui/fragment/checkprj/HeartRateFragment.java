@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.het.common.callback.ICallback;
 import com.het.common.utils.LogUtils;
@@ -29,6 +30,7 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
 import lecho.lib.hellocharts.model.Axis;
 import lecho.lib.hellocharts.model.Column;
@@ -48,6 +50,14 @@ public class HeartRateFragment extends BaseFragment {
     ImageView mTestResult;
     @InjectView(R.id.heart_rate_value)
     DivisionCircle2 mHeartRateValue;
+
+    @InjectView(R.id.layout_result)
+    LinearLayout mLayoutResult;
+    @InjectView(R.id.indicate_arrow)
+    ImageView mArrow;
+    @InjectView(R.id.test_result_show)
+    LinearLayout mResultShow;
+    private boolean isUp = true;
 
     private String mTestValue;
     private String mTestTime;
@@ -133,6 +143,27 @@ public class HeartRateFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         LogUtils.e("HeartRateFragment,onHiddenChanged========");
     }
+
+    @OnClick({R.id.layout_result})
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.layout_result:
+
+                if (isUp) {
+                    mArrow.setImageResource(R.mipmap.icon_indicator_arrow_down);
+                    mResultShow.setVisibility(View.VISIBLE);
+                    isUp = false;
+                } else {
+                    mArrow.setImageResource(R.mipmap.icon_indicator_arrow_up);
+                    mResultShow.setVisibility(View.GONE);
+                    isUp = true;
+                }
+
+                break;
+        }
+    }
+
 
     public void onEventMainThread(HeartPressureEvent event) {
         Object object = event.object;
