@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CommonResource/CommonResource.iml" filepath="$PROJECT_DIR$/CommonResource/CommonResource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonUtils/CommonUtils.iml" filepath="$PROJECT_DIR$/CommonUtils/CommonUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmartBracelet.iml" filepath="$PROJECT_DIR$/SmartBracelet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-app-appcompat-v7/android-app-appcompat-v7.iml" filepath="$PROJECT_DIR$/android-app-appcompat-v7/android-app-appcompat-v7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smartbracelet/smartbracelet.iml" filepath="$PROJECT_DIR$/smartbracelet/smartbracelet.iml" />
+    </modules>
+  </component>
+</project>

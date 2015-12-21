@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">取消</string>
+    <string name="common_sure">确定</string>
+    <string name="common_next">下一步</string>
+    <string name="common_no_network">网络不可用，请检查网络设置</string>
+
+    <string name="uploadHeader_device_not_support">您的设备暂不支持此功能</string>
+    <string name="common_loading_prompt">加载中……</string>
+
+    <string name="common_left_click">topbar左边按钮</string>
+    <string name="common_right_click">topbar右边按钮</string>
+
+    <!--PullToRefresh-->
+    <string name="header_hint_refresh_normal">Pull to refresh</string>
+    <string name="header_hint_refresh_ready">Release to refresh</string>
+    <string name="header_hint_refresh_loading">Refreshing&#8230;</string>
+    <string name="header_hint_refresh_time">Time：</string>
+    <string name="footer_hint_load_normal">Load more</string>
+    <string name="footer_hint_load_ready">Release to load more</string>
+    <string name="please_input_important_word">请输入关键字</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.het.newhet.view.LoadingProcessView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55ffffff">
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        style="@style/StyleProgressBarMini"
+        android:layout_width="50dp"
+        android:layout_height="13dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/shape_progressbar_bg"
+        android:max="100"
+        android:progress="0" />
+</com.het.newhet.view.LoadingProcessView>
+
+<!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/res/layout/adapter_process_layer.xml --><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/build/intermediates/bundles/debug/res/layout/adapter_process_layer.xml -->

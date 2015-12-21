@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:state_pressed="true" android:drawable="@color/common_btn_selected_color"/>
+   <item android:state_focused="true" android:drawable="@color/common_btn_selected_color"></item>
+   <item  android:drawable="@android:color/white"/>
+</selector><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/res/drawable/bg_color_selector.xml --><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/build/intermediates/bundles/debug/res/drawable/bg_color_selector.xml -->

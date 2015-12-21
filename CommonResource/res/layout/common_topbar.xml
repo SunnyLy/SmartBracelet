@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.het.comres.widget.CommonTopBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_top_bar"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:background="?attr/colorPrimary">
+
+</com.het.comres.widget.CommonTopBar>

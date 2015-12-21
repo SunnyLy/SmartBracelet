@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\OuterProj\SmartBracelet\CommonResource\res"><file name="push_bottom_in" path="E:\OuterProj\SmartBracelet\CommonResource\res\anim\push_bottom_in.xml" qualifiers="" type="anim"/><file name="push_bottom_out" path="E:\OuterProj\SmartBracelet\CommonResource\res\anim\push_bottom_out.xml" qualifiers="" type="anim"/><file name="slide_in_from_bottom" path="E:\OuterProj\SmartBracelet\CommonResource\res\anim\slide_in_from_bottom.xml" qualifiers="" type="anim"/><file name="slide_in_from_top" path="E:\OuterProj\SmartBracelet\CommonResource\res\anim\slide_in_from_top.xml" qualifiers="" type="anim"/><file name="slide_out_to_bottom" path="E:\OuterProj\SmartBracelet\CommonResource\res\anim\slide_out_to_bottom.xml" qualifiers="" type="anim"/><file name="slide_out_to_top" path="E:\OuterProj\SmartBracelet\CommonResource\res\anim\slide_out_to_top.xml" qualifiers="" type="anim"/><file name="bg_color_selector" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\bg_color_selector.xml" qualifiers="" type="drawable"/><file name="btn_common_topbar" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\btn_common_topbar.xml" qualifiers="" type="drawable"/><file name="btn_common_whitegray" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\btn_common_whitegray.xml" qualifiers="" type="drawable"/><file name="circle_ball" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\circle_ball.xml" qualifiers="" type="drawable"/><file name="common_dialog_bg" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\common_dialog_bg.xml" qualifiers="" type="drawable"/><file name="common_toast" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\common_toast.xml" qualifiers="" type="drawable"/><file name="community_toast_bg" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\community_toast_bg.xml" qualifiers="" type="drawable"/><file name="delete_selector" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\delete_selector.xml" qualifiers="" type="drawable"/><file name="dialog_btn_bg_selector" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\dialog_btn_bg_selector.xml" qualifiers="" type="drawable"/><file name="friend_home_page_background" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\friend_home_page_background.png" qualifiers="" type="drawable"/><file name="indicator_bg_bottom" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\indicator_bg_bottom.xml" qualifiers="" type="drawable"/><file name="indicator_bg_top" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\indicator_bg_top.xml" qualifiers="" type="drawable"/><file name="shape_oval_red" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\shape_oval_red.xml" qualifiers="" type="drawable"/><file name="shape_oval_search_gray" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\shape_oval_search_gray.xml" qualifiers="" type="drawable"/><file name="shape_progressbar_bg" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\shape_progressbar_bg.xml" qualifiers="" type="drawable"/><file name="shape_progressbar_mini" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\shape_progressbar_mini.xml" qualifiers="" type="drawable"/><file name="shape_rect_angle_white" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\shape_rect_angle_white.xml" qualifiers="" type="drawable"/><file name="wheelview_bg" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\wheelview_bg.xml" qualifiers="" type="drawable"/><file name="wheelview_val" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable\wheelview_val.xml" qualifiers="" type="drawable"/><file name="icon_delete" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-hdpi\icon_delete.png" qualifiers="hdpi" type="drawable"/><file name="round_corner_progress_icon" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-hdpi\round_corner_progress_icon.png" qualifiers="hdpi" type="drawable"/><file name="search_clear_normal" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-hdpi\search_clear_normal.png" qualifiers="hdpi" type="drawable"/><file name="search_clear_pressed" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-hdpi\search_clear_pressed.png" qualifiers="hdpi" type="drawable"/><file name="round_corner_progress_icon" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-mdpi\round_corner_progress_icon.png" qualifiers="mdpi" type="drawable"/><file name="arrow_back" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\arrow_back.png" qualifiers="xhdpi" type="drawable"/><file name="arrow_down" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\arrow_down.png" qualifiers="xhdpi" type="drawable"/><file name="arrow_right" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\arrow_right.png" qualifiers="xhdpi" type="drawable"/><file name="arrow_up" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\arrow_up.png" qualifiers="xhdpi" type="drawable"/><file name="bottom" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\bottom.png" qualifiers="xhdpi" type="drawable"/><file name="btn_mimakejian_shurukuang" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\btn_mimakejian_shurukuang.png" qualifiers="xhdpi" type="drawable"/><file name="btn_mimakejian_shurukuang_press" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\btn_mimakejian_shurukuang_press.png" qualifiers="xhdpi" type="drawable"/><file name="btn_pressed" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\btn_pressed.png" qualifiers="xhdpi" type="drawable"/><file name="btn_unpressed" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\btn_unpressed.png" qualifiers="xhdpi" type="drawable"/><file name="clife_loading" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\clife_loading.gif" qualifiers="xhdpi" type="drawable"/><file name="default_ptr_flip" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\default_ptr_flip.png" qualifiers="xhdpi" type="drawable"/><file name="default_ptr_rotate" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\default_ptr_rotate.png" qualifiers="xhdpi" type="drawable"/><file name="default_user_head" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\default_user_head.png" qualifiers="xhdpi" type="drawable"/><file name="frame" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\frame.png" qualifiers="xhdpi" type="drawable"/><file name="icon_close" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\icon_close.png" qualifiers="xhdpi" type="drawable"/><file name="icon_plugin_arrow_left" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\icon_plugin_arrow_left.png" qualifiers="xhdpi" type="drawable"/><file name="icon_search" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\icon_search.png" qualifiers="xhdpi" type="drawable"/><file name="ic_drawer" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\ic_drawer.png" qualifiers="xhdpi" type="drawable"/><file name="indicator_arrow" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\indicator_arrow.png" qualifiers="xhdpi" type="drawable"/><file name="main_icon_search" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\main_icon_search.png" qualifiers="xhdpi" type="drawable"/><file name="mask" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\mask.png" qualifiers="xhdpi" type="drawable"/><file name="pull_down" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\pull_down.png" qualifiers="xhdpi" type="drawable"/><file name="refresh" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\refresh.png" qualifiers="xhdpi" type="drawable"/><file name="refreshing" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\refreshing.png" qualifiers="xhdpi" type="drawable"/><file name="round_corner_progress_icon" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\round_corner_progress_icon.png" qualifiers="xhdpi" type="drawable"/><file name="user_center_arrow" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\user_center_arrow.png" qualifiers="xhdpi" type="drawable"/><file name="xc_set_change_pin" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\xc_set_change_pin.png" qualifiers="xhdpi" type="drawable"/><file name="xc_set_icon" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\xc_set_icon.png" qualifiers="xhdpi" type="drawable"/><file name="xc_set_sound" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xhdpi\xc_set_sound.png" qualifiers="xhdpi" type="drawable"/><file name="icon_alert" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xxhdpi\icon_alert.png" qualifiers="xxhdpi" type="drawable"/><file name="round_corner_progress_icon" path="E:\OuterProj\SmartBracelet\CommonResource\res\drawable-xxhdpi\round_corner_progress_icon.png" qualifiers="xxhdpi" type="drawable"/><file name="activity_common_item" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\activity_common_item.xml" qualifiers="" type="layout"/><file name="adapter_process_layer" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\adapter_process_layer.xml" qualifiers="" type="layout"/><file name="button_color_toggle" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\button_color_toggle.xml" qualifiers="" type="layout"/><file name="common_layout_dialog" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\common_layout_dialog.xml" qualifiers="" type="layout"/><file name="common_layout_toast" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\common_layout_toast.xml" qualifiers="" type="layout"/><file name="common_topbar" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\common_topbar.xml" qualifiers="" type="layout"/><file name="common_topbar_help" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\common_topbar_help.xml" qualifiers="" type="layout"/><file name="common_topbar_overlay" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\common_topbar_overlay.xml" qualifiers="" type="layout"/><file name="common_vertical_dialog_layout" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\common_vertical_dialog_layout.xml" qualifiers="" type="layout"/><file name="pull_to_refresh_header_horizontal" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\pull_to_refresh_header_horizontal.xml" qualifiers="" type="layout"/><file name="pull_to_refresh_header_vertical" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\pull_to_refresh_header_vertical.xml" qualifiers="" type="layout"/><file name="pull_to_refresh_header_vertical_clife" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\pull_to_refresh_header_vertical_clife.xml" qualifiers="" type="layout"/><file name="round_corner_layout" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\round_corner_layout.xml" qualifiers="" type="layout"/><file name="round_corner_with_icon_layout" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\round_corner_with_icon_layout.xml" qualifiers="" type="layout"/><file name="round_corner_with_text_layout" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\round_corner_with_text_layout.xml" qualifiers="" type="layout"/><file name="widget_footer" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\widget_footer.xml" qualifiers="" type="layout"/><file name="widget_header" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\widget_header.xml" qualifiers="" type="layout"/><file name="widget_image_text" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\widget_image_text.xml" qualifiers="" type="layout"/><file name="widget_process_loading_view" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\widget_process_loading_view.xml" qualifiers="" type="layout"/><file name="widget_xscrollview_layout" path="E:\OuterProj\SmartBracelet\CommonResource\res\layout\widget_xscrollview_layout.xml" qualifiers="" type="layout"/><file path="E:\OuterProj\SmartBracelet\CommonResource\res\values\attrs.xml" qualifiers=""><declare-styleable name="GifView">
+        <attr format="boolean" name="freezesAnimation"/>
+    </declare-styleable><declare-styleable name="ColorToggleButton">
+        <attr format="color" name="toggole_ball_color"/>
+        <attr format="color" name="toggole_bg_color_sel"/>
+        <attr format="color" name="toggole_bg_color_unsel"/>
+    </declare-styleable><declare-styleable name="RoundCornerProgress">
+        <attr format="float" name="rcProgress"/>
+        <attr format="dimension" name="rcBackgroundPadding"/>
+        <attr format="dimension" name="rcBackgroundRadius"/>
+        <attr format="float" name="rcMax"/>
+        <attr format="integer" name="rcIconSrc"/>
+        <attr format="dimension" name="rcIconSize"/>
+        <attr format="dimension" name="rcIconPadding"/>
+        <attr format="color" name="rcHeaderColor"/>
+        <attr format="color" name="rcProgressColor"/>
+        <attr format="color" name="rcBackgroundColor"/>
+        <attr format="color" name="rcTextProgressColor"/>
+        <attr format="string" name="rcTextProgress"/>
+        <attr format="string" name="rcTextProgressUnit"/>
+        <attr format="dimension" name="rcTextProgressSize"/>
+        <attr format="dimension" name="rcTextProgressWidth"/>
+        <attr format="dimension" name="rcTextProgressPadding"/>
+        <attr format="boolean" name="rcAutoTextChange"/>
+        <attr format="float" name="rcSecondaryProgress"/>
+        <attr format="color" name="rcSecondaryProgressColor"/>
+    </declare-styleable><declare-styleable name="CommImageTextView">
+        <attr format="reference" name="comm_topImageSrc"/>
+        <attr format="string" name="comm_itemName"/>
+    </declare-styleable><declare-styleable name="RoundImageView">
+        <attr format="dimension" name="round_border_width"/>
+        <attr format="color" name="round_border_color"/>
+    </declare-styleable><declare-styleable name="PullToRefresh">
+
+        <!-- A drawable to use as the background of the Refreshable View -->
+        <attr format="reference|color" name="ptrRefreshableViewBackground"/>
+
+        <!-- A drawable to use as the background of the Header and Footer Loading Views -->
+        <attr format="reference|color" name="ptrHeaderBackground"/>
+
+        <!-- Text Color of the Header and Footer Loading Views -->
+        <attr format="reference|color" name="ptrHeaderTextColor"/>
+
+        <!-- Text Color of the Header and Footer Loading Views Sub Header -->
+        <attr format="reference|color" name="ptrHeaderSubTextColor"/>
+
+        <!-- Mode of Pull-to-Refresh that should be used -->
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0"/>
+            <flag name="pullFromStart" value="0x1"/>
+            <flag name="pullFromEnd" value="0x2"/>
+            <flag name="both" value="0x3"/>
+            <flag name="manualOnly" value="0x4"/>
+
+            <!-- These last two are depreacted -->
+            <flag name="pullDownFromTop" value="0x1"/>
+            <flag name="pullUpFromBottom" value="0x2"/>
+        </attr>
+
+        <!-- Whether the Indicator overlay(s) should be used -->
+        <attr format="reference|boolean" name="ptrShowIndicator"/>
+
+        <!-- Drawable to use as Loading Indicator. Changes both Header and Footer. -->
+        <attr format="reference" name="ptrDrawable"/>
+
+        <!-- Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. -->
+        <attr format="reference" name="ptrDrawableStart"/>
+
+        <!-- Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. -->
+        <attr format="reference" name="ptrDrawableEnd"/>
+
+        <!-- Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. -->
+        <attr format="reference|boolean" name="ptrOverScroll"/>
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views -->
+        <attr format="reference" name="ptrHeaderTextAppearance"/>
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header -->
+        <attr format="reference" name="ptrSubHeaderTextAppearance"/>
+
+        <!-- Style of Animation should be used displayed when pulling. -->
+        <attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0"/>
+            <flag name="flip" value="0x1"/>
+            <flag name="anim" value="0x2"/>
+        </attr>
+
+        <!-- Whether the user can scroll while the View is Refreshing -->
+        <attr format="reference|boolean" name="ptrScrollingWhileRefreshingEnabled"/>
+
+        <!--
+        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be
+        	able to scroll while refreshing, and behaves better. It acheives this by adding
+        	Header and/or Footer Views to the ListView.
+
+
+
+        -->
+        <attr format="reference|boolean" name="ptrListViewExtrasEnabled"/>
+
+        <!--
+        	Whether the Drawable should be continually rotated as you pull. This only
+        	takes effect when using the 'Rotate' Animation Style.
+
+
+
+        -->
+        <attr format="reference|boolean" name="ptrRotateDrawableWhilePulling"/>
+
+        <!-- BELOW HERE ARE DEPRECEATED. DO NOT USE. -->
+        <attr format="reference|color" name="ptrAdapterViewBackground"/>
+        <attr format="reference" name="ptrDrawableTop"/>
+        <attr format="reference" name="ptrDrawableBottom"/>
+    </declare-styleable><declare-styleable name="ItemLinearLayout">
+        <attr format="boolean" name="item_showLeftImage"/>
+        <attr format="integer" name="item_leftImageId"/>
+        <attr format="reference" name="item_leftImageSrc"/>
+        <attr format="string" name="item_funcName"/>
+        <attr format="boolean" name="item_showRightImage"/>
+        <attr format="integer" name="item_rightImageId"/>
+        <attr format="reference" name="item_rightImageSrc"/>
+        <attr format="boolean" name="item_showRightText"/>
+        <attr format="string" name="item_rightText"/>
+        <attr format="boolean" name="item_showDiliver"/>
+        <attr format="boolean" name="item_isShowRight"/>
+        <attr format="integer" name="item_text_color"/>
+        <attr format="integer" name="item_diliver_color"/>
+        <!-- 是否显示分割线 -->
+    </declare-styleable><declare-styleable name="GifTextureView">
+        <attr format="reference|string" name="gifSource"/>
+        <attr format="boolean" name="isOpaque"/>
+    </declare-styleable><declare-styleable name="CustomTheme">
+        <attr format="reference" name="gifViewStyle"/>
+    </declare-styleable><declare-styleable name="SideBar">
+        <attr format="color" name="ChooseTextColor"/>
+        <attr format="color" name="UnChooseTextColor"/>
+        <attr format="reference" name="ChooseBgDrawable"/>
+        <attr format="reference" name="UnChooseBgDrawable"/>
+        <attr format="dimension" name="TextSize"/>
+    </declare-styleable></file><file path="E:\OuterProj\SmartBracelet\CommonResource\res\values\colors.xml" qualifiers=""><color name="common_window_gray">#FFF0EFF5</color><color name="common_dividercolor">#FFD2D2D2</color><color name="divider_circleintro">#cbccce</color><color name="common_topbar_bg_checked">#AAEC1B23</color><color name="common_dilivercolor_gray">#FFD8D8D8</color><color name="common_top_bar_color">#FFEC1B23</color><color name="common_text_color">#323232</color><color name="white_alpha">#ccffffff</color><color name="common_white_alpha_tempture">#FFEEEEEE</color><color name="common_red">#FFFF0000</color><color name="common_black">#FF000000</color><color name="common_black_alpah22">#22000000</color><color name="grey_alpha">#ccaaaaaa</color><color name="common_status_bar_color">#FF2D7BD3</color><color name="black_text">#333333</color><color name="common_textcolor_blue">#FF2E7BD3</color><color name="common_bg_gray_little">#FFF6F6F6</color><color name="transparent">#00000000</color><color name="textcolor_blue">#FF2E7BD3</color><color name="common_blue">#FF0000FF</color><color name="common_half_black">#5F000000</color><color name="common_btn_selected_color">#FFFAFAFA</color><color name="common_white">#FFFFFFFF</color></file><file path="E:\OuterProj\SmartBracelet\CommonResource\res\values\dimens.xml" qualifiers=""><dimen name="indicator_corner_radius">12dp</dimen><dimen name="indicator_right_padding">10dp</dimen><dimen name="ldrawer_drawableSize">50dp</dimen><dimen name="ldrawer_topBottomBarArrowSize">11dp</dimen><dimen name="common_diliverHeight">1px</dimen><dimen name="ldrawer_middleBarArrowSize">16dp</dimen><dimen name="common_textsize_xxhigh">20sp</dimen><dimen name="common_topbar_height">50dp</dimen><dimen name="common_textsize_xxmiddle">16sp</dimen><dimen name="common_textsize_default">12sp</dimen><dimen name="common_textsize_high">17sp</dimen><dimen name="header_height">60dp</dimen><dimen name="common_textsize_xmiddle">15sp</dimen><dimen name="header_footer_top_bottom_padding">5dp</dimen><dimen name="common_btn_height">48dp</dimen><dimen name="common_textsize_small">10sp</dimen><dimen name="ldrawer_thickness">2dp</dimen><dimen name="ldrawer_gapBetweenBars">4dp</dimen><dimen name="ldrawer_barSize">18dp</dimen><dimen name="footer_padding">10dp</dimen><dimen name="footer_height">90dp</dimen><dimen name="indicator_internal_padding">4dp</dimen><dimen name="common_textsize_xhigh">18sp</dimen><dimen name="header_footer_left_right_padding">24dp</dimen><dimen name="common_textsize_large">22sp</dimen><dimen name="common_textsize_middle">14sp</dimen></file><file path="E:\OuterProj\SmartBracelet\CommonResource\res\values\ids.xml" qualifiers=""><item name="scrollview" type="id"/><item name="webview" type="id"/><item name="gridview" type="id"/></file><file path="E:\OuterProj\SmartBracelet\CommonResource\res\values\pull_refresh_strings.xml" qualifiers=""><string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string><string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string><string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string><string name="pull_to_refresh_refreshing_label">Loading…</string><string name="pull_to_refresh_pull_label">Pull to refresh…</string><string name="pull_to_refresh_release_label">Release to refresh…</string></file><file path="E:\OuterProj\SmartBracelet\CommonResource\res\values\strings.xml" qualifiers=""><string name="uploadHeader_device_not_support">您的设备暂不支持此功能</string><string name="common_left_click">topbar左边按钮</string><string name="common_right_click">topbar右边按钮</string><string name="common_loading_prompt">加载中……</string><string name="header_hint_refresh_time">Time：</string><string name="please_input_important_word">请输入关键字</string><string name="common_next">下一步</string><string name="header_hint_refresh_ready">Release to refresh</string><string name="header_hint_refresh_normal">Pull to refresh</string><string name="header_hint_refresh_loading">Refreshing…</string><string name="common_cancel">取消</string><string name="common_no_network">网络不可用，请检查网络设置</string><string name="common_sure">确定</string><string name="footer_hint_load_normal">Load more</string><string name="footer_hint_load_ready">Release to load more</string></file><file path="E:\OuterProj\SmartBracelet\CommonResource\res\values\styles.xml" qualifiers=""><style name="StyleProgressBarMini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/shape_progressbar_mini</item>
+    </style><style name="Widget.GifView" parent="@android:style/Widget"/><style name="common_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--无边框-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 去掉黑色边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--半透明-->
+    </style><style name="fade_animation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="@android:windowExitAnimation">@android:anim/fade_out</item>
+    </style><style name="style.topbar" parent="">
+        <item name="android:textColorPrimary">@color/common_white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:height">50dp</item>
+    </style><style name="DialogFadeIn" parent="dialog">
+        <item name="android:windowAnimationStyle">@style/fade_animation</item>
+        <!-- 模糊 -->
+    </style><style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style><style name="common_dialogText.Title">
+
+        <!-- 标题 -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style><style name="Style.TopBar.White" parent="">
+        <item name="android:textColor">@color/common_white</item>
+        <item name="android:textSize">18sp</item>
+    </style><style name="common_dialogText">
+
+        <!-- 内容 -->
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">16sp</item>
+    </style><style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style></file></source><source path="E:\OuterProj\SmartBracelet\CommonResource\build\generated\res\rs\release"/><source path="E:\OuterProj\SmartBracelet\CommonResource\build\generated\res\resValues\release"/></dataSet><dataSet config="release"><source path="E:\OuterProj\SmartBracelet\CommonResource\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="PullToRefresh"><attr format="reference|color" name="ptrRefreshableViewBackground"/><attr format="reference|color" name="ptrHeaderBackground"/><attr format="reference|color" name="ptrHeaderTextColor"/><attr format="reference|color" name="ptrHeaderSubTextColor"/><attr name="ptrMode"><flag name="disabled" value="0x0"/><flag name="pullFromStart" value="0x1"/><flag name="pullFromEnd" value="0x2"/><flag name="both" value="0x3"/><flag name="manualOnly" value="0x4"/><flag name="pullDownFromTop" value="0x1"/><flag name="pullUpFromBottom" value="0x2"/></attr><attr format="reference|boolean" name="ptrShowIndicator"/><attr format="reference" name="ptrDrawable"/><attr format="reference" name="ptrDrawableStart"/><attr format="reference" name="ptrDrawableEnd"/><attr format="reference|boolean" name="ptrOverScroll"/><attr format="reference" name="ptrHeaderTextAppearance"/><attr format="reference" name="ptrSubHeaderTextAppearance"/><attr name="ptrAnimationStyle"><flag name="rotate" value="0x0"/><flag name="flip" value="0x1"/><flag name="anim" value="0x2"/></attr><attr format="reference|boolean" name="ptrScrollingWhileRefreshingEnabled"/><attr format="reference|boolean" name="ptrListViewExtrasEnabled"/><attr format="reference|boolean" name="ptrRotateDrawableWhilePulling"/><attr format="reference|color" name="ptrAdapterViewBackground"/><attr format="reference" name="ptrDrawableTop"/><attr format="reference" name="ptrDrawableBottom"/></declare-styleable><declare-styleable name="GifView"><attr format="boolean" name="freezesAnimation"/></declare-styleable><declare-styleable name="ColorToggleButton"><attr format="color" name="toggole_ball_color"/><attr format="color" name="toggole_bg_color_sel"/><attr format="color" name="toggole_bg_color_unsel"/></declare-styleable><declare-styleable name="RoundCornerProgress"><attr format="float" name="rcProgress"/><attr format="dimension" name="rcBackgroundPadding"/><attr format="dimension" name="rcBackgroundRadius"/><attr format="float" name="rcMax"/><attr format="integer" name="rcIconSrc"/><attr format="dimension" name="rcIconSize"/><attr format="dimension" name="rcIconPadding"/><attr format="color" name="rcHeaderColor"/><attr format="color" name="rcProgressColor"/><attr format="color" name="rcBackgroundColor"/><attr format="color" name="rcTextProgressColor"/><attr format="string" name="rcTextProgress"/><attr format="string" name="rcTextProgressUnit"/><attr format="dimension" name="rcTextProgressSize"/><attr format="dimension" name="rcTextProgressWidth"/><attr format="dimension" name="rcTextProgressPadding"/><attr format="boolean" name="rcAutoTextChange"/><attr format="float" name="rcSecondaryProgress"/><attr format="color" name="rcSecondaryProgressColor"/></declare-styleable><declare-styleable name="RoundImageView"><attr format="dimension" name="round_border_width"/><attr format="color" name="round_border_color"/></declare-styleable><declare-styleable name="CommImageTextView"><attr format="reference" name="comm_topImageSrc"/><attr format="string" name="comm_itemName"/></declare-styleable><declare-styleable name="ItemLinearLayout"><attr format="boolean" name="item_showLeftImage"/><attr format="integer" name="item_leftImageId"/><attr format="reference" name="item_leftImageSrc"/><attr format="string" name="item_funcName"/><attr format="boolean" name="item_showRightImage"/><attr format="integer" name="item_rightImageId"/><attr format="reference" name="item_rightImageSrc"/><attr format="boolean" name="item_showRightText"/><attr format="string" name="item_rightText"/><attr format="boolean" name="item_showDiliver"/><attr format="boolean" name="item_isShowRight"/><attr format="integer" name="item_text_color"/><attr format="integer" name="item_diliver_color"/></declare-styleable><declare-styleable name="CustomTheme"><attr format="reference" name="gifViewStyle"/></declare-styleable><declare-styleable name="SideBar"><attr format="color" name="ChooseTextColor"/><attr format="color" name="UnChooseTextColor"/><attr format="reference" name="ChooseBgDrawable"/><attr format="reference" name="UnChooseBgDrawable"/><attr format="dimension" name="TextSize"/></declare-styleable><declare-styleable name="GifTextureView"><attr format="reference|string" name="gifSource"/><attr format="boolean" name="isOpaque"/></declare-styleable></configuration></mergedItems></merger>

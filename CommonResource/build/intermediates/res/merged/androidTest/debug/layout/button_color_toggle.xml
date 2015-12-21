@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="100dp">
+
+    <com.het.comres.widget.ColorChangeBgView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.het.comres.widget.AnimBall
+        android:id="@+id/animball"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+</RelativeLayout><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/res/layout/button_color_toggle.xml --><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/build/intermediates/bundles/debug/res/layout/button_color_toggle.xml -->

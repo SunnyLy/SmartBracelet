@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/common_half_black"/>
+    <corners android:radius="60dp"/>
+</shape><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/res/drawable/common_toast.xml -->

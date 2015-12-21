@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_topbar_height"
+    android:background="#FFEEEEEE"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/overlay_cancel"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="@string/common_cancel"
+        android:textColor="@color/common_textcolor_blue"
+        android:textSize="@dimen/common_textsize_xmiddle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/overlay_cancel"
+        android:background="@drawable/shape_oval_search_gray">
+
+        <ImageView
+            android:id="@+id/overlay_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_search" />
+
+        <ImageView
+            android:id="@+id/overlay_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_close" />
+
+        <EditText
+            android:id="@+id/overlay_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/overlay_close"
+            android:layout_toRightOf="@id/overlay_search"
+            android:layout_marginLeft="3dp"
+            android:background="@null"
+            android:hint="@string/please_input_important_word"
+            android:textSize="@dimen/common_textsize_middle"
+            android:textColor="#FF4D4D4D"
+            android:textColorHint="#FFDADADA" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

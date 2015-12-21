@@ -1,0 +1,1 @@
+include ':smartbracelet', ':CommonResource', ':CommonUtils', ':android-app-appcompat-v7'

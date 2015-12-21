@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/E:/OuterProj/SmartBracelet/android-app-appcompat-v7/build/intermediates/bundles/debug/res/values-v12/values-v12.xml -->
+    <eat-comment/>
+    <style name="Platform.AppCompat" parent="Platform.V12.AppCompat"/>
+    <style name="Platform.AppCompat.Light" parent="Platform.V12.AppCompat.Light"/>
+    <style name="Platform.V12.AppCompat" parent="Platform.V11.AppCompat">
+        <item name="android:textCursorDrawable">@drawable/abc_text_cursor_mtrl_alpha</item>
+    </style>
+    <style name="Platform.V12.AppCompat.Light" parent="Platform.V11.AppCompat.Light">
+        <item name="android:textCursorDrawable">@drawable/abc_text_cursor_mtrl_alpha</item>
+    </style>
+</resources>

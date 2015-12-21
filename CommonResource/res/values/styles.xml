@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    自定义提示框
+    @author sunny
+    @date 2014.3.27
+  -->
+    <style name="common_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--无边框-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 去掉黑色边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--半透明-->
+    </style>
+
+    <style name="common_dialogText">
+
+        <!-- 内容 -->
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="common_dialogText.Title">
+
+        <!-- 标题 -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <!-- loading -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="DialogFadeIn" parent="dialog">
+        <item name="android:windowAnimationStyle">@style/fade_animation</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="fade_animation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="@android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="style.topbar" parent="">
+        <item name="android:textColorPrimary">@color/common_white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:height">50dp</item>
+    </style>
+
+    <!--text 风格   -->
+    <style name="Style.TopBar.White" parent="">
+        <item name="android:textColor">@color/common_white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.GifView" parent="@android:style/Widget" />
+
+
+    <style name="StyleProgressBarMini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/shape_progressbar_mini</item>
+    </style>
+</resources>

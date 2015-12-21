@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_white">#FFFFFFFF</color>
+    <color name="common_white_alpha_tempture">#FFEEEEEE</color>
+    <color name="common_black">#FF000000</color>
+    <color name="common_red">#FFFF0000</color>
+    <color name="common_blue">#FF0000FF</color>
+    <color name="common_half_black">#5F000000</color>
+    <color name="common_top_bar_color">#FFEC1B23</color>
+    <color name="common_topbar_bg_checked">#AAEC1B23</color>
+    <color name="common_black_alpah22">#22000000</color>
+    <color name="common_status_bar_color">#FF2D7BD3</color>
+    <color name="common_window_gray">#FFF0EFF5</color>
+    <color name="common_textcolor_blue">#FF2E7BD3</color>
+    <color name="common_bg_gray_little">#FFF6F6F6</color>
+    <color name="common_dividercolor">#FFD2D2D2</color>
+    <color name="common_dilivercolor_gray">#FFD8D8D8</color>
+    <color name="common_btn_selected_color">#FFFAFAFA</color>
+    <color name="common_text_color">#323232</color>
+
+    <color name="divider_circleintro">#cbccce</color>
+
+    <color name="white_alpha">#ccffffff</color>
+    <color name="grey_alpha">#ccaaaaaa</color>
+    <color name="black_text">#333333</color>
+    <color name="transparent">#00000000</color>
+    <color name="textcolor_blue">#FF2E7BD3</color>
+
+</resources>

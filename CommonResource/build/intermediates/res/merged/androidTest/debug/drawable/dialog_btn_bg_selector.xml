@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:state_pressed="true" android:drawable="@color/common_btn_selected_color"></item>
+   <item  android:drawable="@android:color/transparent"></item>
+</selector><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/res/drawable/dialog_btn_bg_selector.xml --><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/build/intermediates/bundles/debug/res/drawable/dialog_btn_bg_selector.xml -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_dialog_content_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+
+</LinearLayout>
+<!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/res/layout/common_vertical_dialog_layout.xml --><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/build/intermediates/bundles/debug/res/layout/common_vertical_dialog_layout.xml -->

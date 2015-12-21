@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="5dip" />
+            <gradient
+                android:angle="270"
+                android:centerY="0.75"
+                android:endColor="#c9e7ff"
+                android:startColor="#c9e7ff" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="90dip" />
+                <gradient
+                    android:angle="270"
+                    android:centerY="0.75"
+                    android:endColor="#68b4ff"
+                    android:startColor="#68b4ff" />
+            </shape>
+        </clip>
+    </item>
+</layer-list><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/res/drawable/shape_progressbar_mini.xml --><!-- From: file:/E:/OuterProj/SmartBracelet/CommonResource/build/intermediates/bundles/debug/res/drawable/shape_progressbar_mini.xml -->
