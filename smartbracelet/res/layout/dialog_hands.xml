@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimens15">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens15"
+            android:text="左右手选择"
+            style="@style/Style.Dialog.CustomDialog" />
+
+        <Button
+            android:id="@+id/dialog_submmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_common_topbar"
+            android:text="完成" />
+    </RelativeLayout>
+
+    <!--man-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:paddingLeft="@dimen/comm_padding"
+        android:paddingRight="@dimen/comm_padding">
+
+        <TextView
+            android:id="@+id/dialog_sex_man"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/userinfo_hands_left"
+            android:layout_alignParentLeft="true"
+            style="@style/Style.CheckBox.Sex.Man" />
+
+        <CheckBox
+            android:id="@+id/cb_hands_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!--woman-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:paddingLeft="@dimen/comm_padding"
+        android:paddingRight="@dimen/comm_padding">
+
+        <TextView
+            android:id="@+id/dialog_sex_woman"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/userinfo_hands_right"
+            android:layout_alignParentLeft="true"
+            style="@style/Style.CheckBox.Sex.Man" />
+
+        <CheckBox
+            android:id="@+id/cb_hands_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</LinearLayout>

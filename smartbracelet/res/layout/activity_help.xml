@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_topbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens15"
+        android:background="@drawable/help_tab_bg"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/help_learn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1.0"
+            android:text="@string/help_learn"
+            android:background="@drawable/help_tab_selector"
+            android:textColor="@color/textcolor_9B"
+            android:textSize="@dimen/textSize16" />
+
+        <Button
+            android:id="@+id/help_newer"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1.0"
+            android:text="@string/help_newer"
+            android:background="@drawable/help_tab_selector"
+            android:textColor="@color/textcolor_9B"
+            android:textSize="@dimen/textSize16" />
+
+        <Button
+            android:id="@+id/help_solve_problem"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1.0"
+            android:text="@string/help_solve_problem"
+            android:background="@drawable/help_tab_selector"
+            android:textColor="@color/textcolor_9B"
+            android:textSize="@dimen/textSize16" />
+
+    </LinearLayout>
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <FrameLayout
+        android:id="@+id/help_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

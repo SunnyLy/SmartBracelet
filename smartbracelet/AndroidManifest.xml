@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smartbracelet.sunny">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="com.smartbracelet.sunny.AppApplication"
+        android:theme="@style/Theme.CLife.StatusBar">
+        <activity
+            android:name="com.smartbracelet.sunny.ui.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.smartbracelet.sunny.ui.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.smartbracelet.sunny.ui.GuiderActivity" />
+        <activity android:name="com.smartbracelet.sunny.ui.set.SettingActivity" />
+        <activity android:name="com.smartbracelet.sunny.ui.help.HelpActivity" />
+        <activity android:name="com.smartbracelet.sunny.ui.favorite.MyFavoriteActivity" />
+        <activity android:name="com.smartbracelet.sunny.ui.report.StageReportActivity" />
+        <activity android:name="com.smartbracelet.sunny.ui.user.UserInfoActivity" />
+        <activity android:name="com.smartbracelet.sunny.ui.set.AppUpdateActivity" />
+        <activity android:name=".ui.set.AboutActivity" />
+        <activity android:name=".ui.user.MyBloothPressureActivity" />
+        <activity android:name=".ui.user.MyBreathActivity" />
+        <activity android:name=".ui.user.MyHeartRateActivity" />
+        <activity android:name=".ui.user.MyMotionStepActivity" />
+        <activity android:name=".ui.user.MyTiredActivity" />
+        <activity android:name=".ui.logreg.LoginActivity" />
+        <activity android:name=".ui.logreg.RegisterActivity" />
+        <activity android:name=".ui.user.CheckItemActivity" />
+        <!--扫一扫-->
+        <activity android:name=".zxing.MipcaActivityCapture" />
+        <!--绑定-->
+        <activity android:name=".ui.device.BindActivity" />
+        <!--后台下载服务-->
+        <service android:name=".service.UpdateService" />
+        <service android:name=".service.BluetoothLeService" />
+
+
+        <!-- ====================分享开始 ========================== -->
+        <!-- 分享 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent222222" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+
+        <!-- sinaweibo -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+        <!-- =====================分享结束=========================== -->
+    </application>
+
+</manifest>

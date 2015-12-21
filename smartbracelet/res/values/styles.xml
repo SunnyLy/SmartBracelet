@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--text 风格   -->
+    <style name="Style.Text.White" parent="Style.TopBar.White"></style>
+
+    <style name="Style.EditText" parent="">
+        <item name="android:textSize">@dimen/common_textsize_xmiddle</item>
+        <item name="android:textColor">@color/textColor_defalut</item>
+        <item name="android:textColorHint">@color/textcolor_hint</item>
+    </style>
+
+    <style name="Style.PopUpWindowText" parent="">
+        <item name="android:textSize">@dimen/common_textsize_xmiddle</item>
+        <item name="android:textColor">@color/textcolor_popup</item>
+    </style>
+
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_scale_out</item>
+    </style>
+
+    <style name="Style.Text.Bottom" parent="">
+        <item name="android:textSize">@dimen/common_textsize_default</item>
+        <item name="android:textColor">@color/textcolor_tag</item>
+    </style>
+
+    <style name="Style.Text.Sence" parent="">
+        <item name="android:textSize">@dimen/common_textsize_xmiddle</item>
+        <item name="android:textColor">@color/textcolor_tag</item>
+    </style>
+
+    <style name="Style.Text.Operate.Tag" parent="">
+        <item name="android:textSize">@dimen/common_textsize_xhigh</item>
+        <item name="android:textColor">@color/textcolor_indicate</item>
+    </style>
+
+    <style name="Style.Text.Operate.Style" parent="">
+        <item name="android:textSize">@dimen/common_textsize_small</item>
+        <item name="android:textColor">@color/textcolor_default_gray</item>
+    </style>
+
+    <style name="Style.Text.Tag" parent="">
+        <item name="android:textSize">@dimen/common_textsize_xmiddle</item>
+        <item name="android:textColor">@color/textcolor_tag</item>
+    </style>
+
+    <style name="Style.Text.Homepage.Post.Title" parent="">
+        <item name="android:textSize">@dimen/common_textsize_xmiddle</item>
+        <item name="android:textColor">@color/textcolor_post_title</item>
+    </style>
+
+    <style name="Style.Text.Indicate" parent="">
+        <item name="android:textSize">@dimen/common_textsize_xmiddle</item>
+        <item name="android:textColor">@color/textcolor_indicate</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Style.CheckBox.CLife" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box_style</item>
+    </style>
+
+    <style name="Style.CheckBox.Sex.Man" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box_sex_man_style</item>
+    </style>
+
+    <style name="Style.CheckBox.Sex.Woman" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box_sex_woman_style</item>
+    </style>
+
+    <!-- 分割线 -->
+    <style name="Style.Divider.Horizontal.Default" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/comm_diliver_height</item>
+        <item name="android:background">@color/common_dividercolor</item>
+    </style>
+
+    <!-- 分割线 -->
+    <style name="Style.Divider.Horizontal.MarginLeft" parent="Style.Divider.Horizontal.Default">
+        <item name="android:background">@color/common_dilivercolor_gray</item>
+        <item name="android:layout_marginLeft">60dp</item>
+    </style>
+
+    <!-- 分割线 -->
+    <style name="Style.Divider.SlidingFragment" parent="Style.Divider.Horizontal.Default">
+        <item name="android:background">@color/common_dilivercolor_gray</item>
+        <item name="android:layout_marginLeft">55dp</item>
+    </style>
+
+    <style name="Style.Divider.Vertical" parent="">
+        <item name="android:layout_width">@dimen/comm_diliver_height</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/bg_color_b5</item>
+    </style>
+
+    <style name="Style.Dialog.CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--无边框-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 去掉黑色边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--半透明-->
+    </style>
+
+
+    <!--common_dialog_layout-->
+    <style name="DialogText">
+
+        <!-- 内容 -->
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DialogText.Title">
+
+        <!-- 标题 -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--circle introduction-->
+    <style name="Style.Divider.CircleIntro" parent="">
+        <item name="android:background">@color/divider_circleintro</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/comm_diliver_height</item>
+    </style>
+
+</resources>

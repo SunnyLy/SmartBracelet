@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color_f8"
+    android:orientation="horizontal">
+
+    <!--测试状态-->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:paddingLeft="@dimen/dimens20"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/dimens10">
+
+        <ImageView
+            android:id="@+id/my_breath_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/my_breath_test_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_breath_test_state"
+            android:textColor="@color/textcolor_e2"
+            android:layout_toRightOf="@+id/my_breath_icon"
+            android:layout_alignTop="@+id/my_breath_icon" />
+
+        <TextView
+            android:id="@+id/my_breath_test_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mybreath_test_stop"
+            android:textSize="@dimen/textSize16"
+            android:textColor="#FF636268"
+            android:layout_below="@+id/my_breath_test_state"
+            android:layout_toRightOf="@+id/my_breath_icon" />
+
+    </RelativeLayout>
+
+    <!--测试结果-->
+    <RelativeLayout
+        android:id="@+id/rl_item_test_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:paddingLeft="@dimen/dimens20"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/dimens10">
+
+        <ImageView
+            android:id="@+id/my_breath_result_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/my_breath_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_breath_test_state"
+            android:textColor="@color/textcolor_e2"
+            android:layout_toRightOf="@+id/my_breath_result_icon"
+            android:layout_alignTop="@+id/my_breath_result_icon" />
+
+        <TextView
+            android:id="@+id/my_breath_result_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mybreath_result_good"
+            android:textSize="@dimen/textSize16"
+            android:textColor="#FF636268"
+            android:layout_below="@+id/my_breath_result"
+            android:layout_toRightOf="@+id/my_breath_result_icon" />
+
+    </RelativeLayout>
+
+</LinearLayout>

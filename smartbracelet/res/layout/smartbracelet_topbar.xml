@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/smart_bracelet_topbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_topbar_height"
+    android:background="@android:color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/smart_bracelet_back"
+        android:layout_width="@dimen/common_topbar_height"
+        android:layout_height="@dimen/common_topbar_height"
+        android:background="@drawable/btn_common_topbar">
+
+        <ImageView
+            android:id="@+id/left_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/common_left_click"
+            android:padding="15dp"
+            android:background="@drawable/btn_common_topbar"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_back" />
+
+        <View
+            android:id="@+id/red_dot"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_alignEnd="@id/left_image"
+            android:layout_alignRight="@id/left_image"
+            android:layout_alignTop="@id/left_image"
+            android:background="@drawable/shape_oval_red"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/smart_bracelet_right_click"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/dimens15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/smart_bracelet_favorite"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/topbar_favorite_icon"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/btn_common_topbar"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/smart_bracelet_share"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/topbar_share_icon"
+            android:scaleType="centerInside"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp"
+            android:background="@drawable/btn_common_topbar"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/smart_bracelet_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_common_topbar"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textAppearance="@style/Style.TopBar.White"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/smart_bracelet_title_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_toLeftOf="@+id/smart_bracelet_right_click"
+        android:layout_toRightOf="@+id/smart_bracelet_back"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/measure_time_icon"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/topbar_time_choose_icon"
+            android:rotation="180" />
+
+        <TextView
+            android:id="@+id/smart_bracelet_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="TitleBar"
+            android:textAppearance="@style/Style.TopBar.White" />
+    </LinearLayout>
+
+</RelativeLayout>

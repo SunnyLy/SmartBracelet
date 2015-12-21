@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dip"
+    android:layout_gravity="bottom"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wheelview_title"
+            style="@style/Style.Text.Tag"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="标题"
+            android:gravity="center"
+            android:padding="10dip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_color_selector"
+            android:id="@+id/wheelview_save"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/comm_save" />
+
+        <View
+            style="@style/Style.Divider.Horizontal.Default"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/comm_diliver_height"
+                android:background="#ffbfd8f1" />
+
+            <!-- android:background="#ffe9f3fb" -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/comm_diliver_height"
+                android:layout_marginTop="26dp"
+                android:background="#ffbfd8f1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <com.het.comres.view.wheelview.WheelView
+                android:id="@+id/wheelview_first"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <com.het.comres.view.wheelview.WheelView
+                android:id="@+id/wheelview_second"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <com.het.comres.view.wheelview.WheelView
+                android:id="@+id/wheelview_three"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:visibility="gone"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@+id/wheelview_unit"
+                style="@style/Style.Text.Tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="CM" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

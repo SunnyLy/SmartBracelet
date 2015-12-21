@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.CLife.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/common_top_bar_color</item>
+        <item name="android:textCursorDrawable">@drawable/bg_edittext_cursor</item>
+        <item name="android:windowBackground">@color/common_window_gray</item>
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="Theme.CLife.StatusBar" parent="Theme.CLife.Base">
+        <item name="android:listChoiceIndicatorSingle">@drawable/checked_text_view</item>
+    </style>
+
+    <style name="Theme.CLife.Normal" parent="Theme.CLife.Base">
+        <item name="android:windowBackground">@color/common_window_gray</item>
+    </style>
+</resources>

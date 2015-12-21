@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- <include layout="@layout/smartbracelet_topbar"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#FFA1192D">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/blooth_pressure_circle">
+
+            <TextView
+                android:id="@+id/blooth_pressure_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="118/77"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/blooth_pressure_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今天：19：00"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/item_test_state_result" />
+
+    <View
+        style="@style/Style.Divider.Horizontal.Default"
+        android:layout_marginLeft="@dimen/dimens10"
+        android:layout_marginRight="@dimen/dimens10" />
+
+    <!--下面用于往上滑动，浏览下面的内容-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/blooth_line_chart_data"
+                android:layout_width="match_parent"
+                android:minHeight="200dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="状况很理想\n理想理想民\n理想民\n理想" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

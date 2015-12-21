@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DF111111"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/common_btn_height"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--阶段报告-->
+            <com.het.comres.view.layout.ItemLinearLayout
+                android:id="@+id/sliding_stage_report"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_btn_height"
+                app:item_funcName="@string/stage_report"
+                app:item_leftImageSrc="@mipmap/sliding_icon_report"
+                app:item_text_color="@color/sliding_text_color"
+                app:item_showDiliver="false"
+                app:item_isShowRight="false" />
+
+            <View style="@style/Style.Divider.SlidingFragment" />
+
+            <!-- 我的收藏 -->
+            <com.het.comres.view.layout.ItemLinearLayout
+                android:id="@+id/sliding_my_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_btn_height"
+                app:item_funcName="@string/my_favorite"
+                app:item_leftImageSrc="@mipmap/sliding_icon_my_favorite"
+                app:item_text_color="@color/sliding_text_color"
+                app:item_showDiliver="false"
+                app:item_isShowRight="false" />
+
+            <View style="@style/Style.Divider.SlidingFragment" />
+
+            <!-- 系统设定 -->
+            <com.het.comres.view.layout.ItemLinearLayout
+                android:id="@+id/sliding_setting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_btn_height"
+                app:item_funcName="@string/system_set"
+                app:item_leftImageSrc="@mipmap/sliding_icon_settings"
+                app:item_text_color="@color/sliding_text_color"
+                app:item_isShowRight="false"
+                app:item_showDiliver="false" />
+
+            <View style="@style/Style.Divider.SlidingFragment" />
+
+            <!-- 用户帮助 -->
+            <com.het.comres.view.layout.ItemLinearLayout
+                android:id="@+id/sliding_help"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_btn_height"
+                app:item_text_color="@color/sliding_text_color"
+                app:item_funcName="@string/help"
+                app:item_leftImageSrc="@mipmap/sliding_icon_help"
+                app:item_isShowRight="false"
+                app:item_showDiliver="false" />
+
+            <View style="@style/Style.Divider.SlidingFragment" />
+
+            <!--量一下-->
+            <com.het.comres.view.layout.ItemLinearLayout
+                android:id="@+id/sliding_settings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_btn_height"
+                app:item_funcName="@string/measure"
+                app:item_text_color="@color/sliding_text_color"
+                app:item_isShowRight="false"
+                android:layout_marginLeft="@dimen/comm_padding"
+                app:item_showDiliver="false" />
+
+            <include layout="@layout/widget_sliding_check_bloor_pressure" />
+
+            <include layout="@layout/widget_sliding_check_breath_reate" />
+
+            <include layout="@layout/widget_sliding_check_heart_pressure" />
+
+            <include layout="@layout/widget_sliding_check_emotion" />
+
+            <include layout="@layout/widget_sliding_check_tired" />
+
+
+            <!-- <include android:id="@+id/debug_widget" layout="@layout/widget_app_debug"/>-->
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

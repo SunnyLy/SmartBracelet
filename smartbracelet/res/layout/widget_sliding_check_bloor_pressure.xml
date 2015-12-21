@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_btn_height"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/comm_padding">
+
+    <ImageView
+        android:id="@+id/iv_bloor_pressure"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/sliding_icon_bloothpressure" />
+
+    <TextView
+        android:id="@+id/tv_bloor_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/comm_padding"
+        android:layout_toRightOf="@+id/iv_bloor_pressure"
+        android:text="@string/bloor_pressure"
+        android:textColor="@color/sliding_text_color" />
+
+    <CheckBox
+        android:id="@+id/cb_bloor_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/comm_padding"
+        android:checked="true" />
+
+</RelativeLayout>

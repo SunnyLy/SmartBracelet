@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_f8"
+    android:orientation="vertical">
+
+    <!--Title-->
+    <include layout="@layout/common_topbar" />
+
+    <com.het.comres.view.edittext.ClearEditText
+        android:id="@+id/login_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:hint="@string/dialog_input_mobile"
+        android:background="@null" />
+
+    <com.het.comres.view.edittext.ClearEditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:hint="请输入密码"
+        android:background="@null" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:background="@drawable/btn_finish_selector"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize16"
+        android:layout_marginLeft="@dimen/dimens15"
+        android:layout_marginRight="@dimen/dimens15"
+        android:layout_marginTop="@dimen/dimens15" />
+
+
+</LinearLayout>

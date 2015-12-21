@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/common_topbar" />
+
+            <TextView
+                android:id="@+id/current_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/base_current_version"
+                android:textColor="@color/textcolor_9B"
+                android:textSize="@dimen/common_textsize_large"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimens15"
+                android:paddingRight="@dimen/dimens15"
+                android:text="@string/about_smart_bracelet"
+                android:textSize="@dimen/common_textsize_middle"
+                android:textColor="@color/textcolor_9B" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/official_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/base_official_net"
+            android:textSize="@dimen/textSize16"
+            android:textColor="@color/textcolor_9B" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimens10"
+            android:layout_marginRight="@dimen/dimens10"
+            android:background="#9B9B9B" />
+
+        <TextView
+            android:id="@+id/official_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize16"
+            android:textColor="@color/textcolor_9B"
+            android:text="@string/base_official_weibo" />
+    </LinearLayout>
+
+
+</merge>

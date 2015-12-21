@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="item_unchoose_color" format="color"></attr>
+        <attr name="item_choose_color" format="color"></attr>
+        <attr name="item_width" format="dimension"></attr>
+        <attr name="item_margin" format="dimension" />
+    </declare-styleable>
+
+    <!--柱状图属性-->
+    <declare-styleable name="BarGraphView">
+        <!--图表的背景-->
+        <attr name="chart_bg" format="color" />
+        <!--柱状图的颜色-->
+        <attr name="chart_bar_color" format="color" />
+        <!--图表控件的宽度-->
+        <attr name="chart_width" format="dimension" />
+        <!--图表控件的高度-->
+        <attr name="chart_height" format="dimension" />
+        <!--柱状图是否显示数值-->
+        <attr name="chart_bar_showValue" format="boolean" />
+        <!--图表标题-->
+        <attr name="chart_title" format="string" />
+        <!--图表标题颜色-->
+        <attr name="chart_title_color" format="color" />
+        <!--图表标题字体大小-->
+        <attr name="chart_title_textsize" format="dimension" />
+    </declare-styleable>
+
+
+    <!--刻度盘属性-->
+    <declare-styleable name="DivisionCircle">
+
+    </declare-styleable>
+
+    <!--刻度盘属性-->
+    <declare-styleable name="DivisionCircle2">
+        <!--最小值-->
+        <attr name="min_value" format="integer" />
+        <!--最大值-->
+        <attr name="max_value" format="integer" />
+        <!--半径-->
+        <attr name="radius" format="integer" />
+        <!--背景色-->
+        <attr name="bg_color" format="color" />
+
+    </declare-styleable>
+</resources>

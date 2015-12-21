@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimens15">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emotion_state_happy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#FFD17913" />
+
+        <ImageView
+            android:id="@+id/icon_emotion_happy"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/icon_emotion_happy_checked" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emotion_state_bother"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#FFD17913" />
+
+        <ImageView
+            android:id="@+id/icon_emotion_bother"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/icon_emotion_bother_normal" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emotion_state_fraid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#FFD17913" />
+
+        <ImageView
+            android:id="@+id/icon_emotion_fraid"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/icon_emotion_fraid_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emotion_state_angry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#FFD17913" />
+
+        <ImageView
+            android:id="@+id/icon_emotion_angry"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/icon_emotion_angry_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emotion_state_hurt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#FFD17913" />
+
+        <ImageView
+            android:id="@+id/icon_emotion_hurt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/icon_emotion_hurt_normal" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/help_solve_connect_failure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="1.手环绑定时无法搜到手环或无法连接"
+        app:item_showLeftImage="false" />
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/help_solve_ble_disconnected"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="2.绑定手环后显示蓝牙未连接"
+        app:item_showLeftImage="false" />
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/help_solve_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="3.手环APP无数据显示"
+        app:item_showLeftImage="false" />
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/help_solve_how_charged"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="4.如何给手环充电"
+        app:item_showLeftImage="false" />
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/help_solve_how_updated"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="5.手环如何升级"
+        app:item_showLeftImage="false" />
+
+</LinearLayout>

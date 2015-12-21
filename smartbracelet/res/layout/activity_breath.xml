@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color_f8"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.smartbracelet.sunny.ui.widget.view.DivisionCircle
+                android:id="@+id/breath_division_circle"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#FFA9475E" />
+
+            <include layout="@layout/item_test_state_result" />
+
+            <View
+                style="@style/Style.Divider.Horizontal.Default"
+                android:layout_marginLeft="@dimen/dimens10"
+                android:layout_marginRight="@dimen/dimens10" />
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/blooth_line_chart_data"
+                android:layout_width="match_parent"
+                android:minHeight="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

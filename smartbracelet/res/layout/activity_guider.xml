@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_f8"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_topbar" />
+
+    <Button
+        android:id="@+id/guider_buied"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:background="@drawable/btn_finish_selector"
+        android:layout_marginLeft="@dimen/dimens15"
+        android:layout_marginRight="@dimen/dimens15"
+        android:text="已购买"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize16"
+        android:gravity="center"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/guider_newer"
+        android:layout_below="@+id/guider_buied"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:background="@drawable/btn_finish_selector"
+        android:layout_marginLeft="@dimen/dimens15"
+        android:layout_marginRight="@dimen/dimens15"
+        android:text="新人了解"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize16"
+        android:layout_marginTop="@dimen/dimens10"
+        android:gravity="center" />
+
+</RelativeLayout>

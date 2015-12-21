@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_btn_height"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/comm_padding">
+
+    <ImageView
+        android:id="@+id/iv_breath_reate"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerInside"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/sliding_icon_breath_rate" />
+
+    <TextView
+        android:id="@+id/tv_breath_reate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/breath_rate"
+        android:textColor="@color/sliding_text_color"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/comm_padding"
+        android:layout_toRightOf="@+id/iv_breath_reate" />
+
+    <CheckBox
+        android:id="@+id/cb_breath_reate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/comm_padding"
+        android:layout_centerVertical="true"
+        android:checked="true" />
+
+</RelativeLayout>

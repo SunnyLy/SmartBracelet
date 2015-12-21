@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">EAP</string>
+    <string name="action_settings">Settings</string>
+
+    <!--base-->
+    <string name="base_quit_toast_msg">再按一次退出程序！！</string>
+    <string name="base_finish">完成</string>
+    <string name="base_sure">确定</string>
+    <string name="base_yes">是</string>
+    <string name="base_no">否</string>
+    <string name="base_official_net">官方网站</string>
+    <string name="base_official_weibo">官方微博</string>
+    <string name="base_current_version">当前版本:V#E</string>
+    <string name="base_save">保存</string>
+
+    <!--侧菜单-->
+    <string name="stage_report">阶段报告</string>
+    <string name="my_favorite">我的收藏</string>
+    <string name="system_set">系统设定</string>
+    <string name="help">用户帮助</string>
+    <string name="measure">量一下(可多选)</string>
+    <string name="bloor_pressure">血压参考值(30秒)</string>
+    <string name="breath_rate">呼吸频率(30秒)</string>
+    <string name="heart_pressure">心率(20秒)</string>
+    <string name="emotion">情绪(2分钟)</string>
+    <string name="tired">疲劳(30秒)</string>
+
+    <!--首页-->
+    <string name="home_blooth_pressure">动态血压</string>
+    <string name="home_heart_rate">心率</string>
+    <string name="home_breath_rate">呼吸频率</string>
+    <string name="home_tired">疲劳</string>
+    <string name="home_mood">心情</string>
+    <string name="home_step">计步</string>
+    <string name="home_re_value">参考值:</string>
+
+    <!--系统设置-->
+    <string name="set_personal">个人信息</string>
+    <string name="set_check_version">检查更新</string>
+    <string name="set_about">关于手环</string>
+    <string name="set_close">关闭手环</string>
+    <string name="set_unbind">设备解绑</string>
+    <string name="set_close_confirm">您确定将关闭手环？</string>
+    <string name="set_unbind_confirm">您确定将解绑手环？</string>
+    <string name="set_updating">正在检查更新……</string>
+
+    <!--版本更新-->
+    <string name="update_version_app">软件版本</string>
+    <string name="update_version_solid">手环版本</string>
+    <string name="update_smart_serialize">手环序列号</string>
+    <string name="update_smart_mac">手环地址</string>
+    <string name="update_getting">获取中……</string>
+
+    <!--个人信息-->
+    <string name="userinfo_sex">选择性别</string>
+    <string name="userinfo_sex_man">男</string>
+    <string name="userinfo_sex_woman">女</string>
+    <string name="userinfo_birthday">出生日期(年/月)</string>
+    <string name="userinfo_weight">体重(kg)</string>
+    <string name="userinfo_height">身高(cm)</string>
+    <string name="userinfo_hands">选择佩戴手</string>
+    <string name="userinfo_hands_left">左</string>
+    <string name="userinfo_hands_right">右</string>
+    <string name="userinfo_bind_mobile">绑定手机号码</string>
+    <string name="userinfo_select_birthday">请选择出生日期</string>
+
+    <!--用户帮助-->
+    <string name="help_newer">新手上路</string>
+    <string name="help_learn">了解</string>
+    <string name="help_solve_problem">故障排除</string>
+    <string name="help_solve_connect_failure">手机绑定时无法搜索到充电器并进入充电状态,
+        指示灯显示为绿色闪烁,然后将手机蓝牙开启并靠近手环再进行尝试搜索和连接.\n
+        请确认您的手机系统版本是Android4.0以上</string>
+    <string name="help_solve_how_charged">1、从手上取下手环，在手环的背部会看到有一椭圆形的凹槽，槽上两端有"N""S"字样；\n
+2、将充电线吸附头放置在此凹槽中，另一端连接5V输出的适配器（一般手机充电器）；\n
+3、开启电源，手环就正常充电了；\n</string>
+    <string name="help_solve_how_update">进入版本检测进行固件更新</string>
+    <string name="help_solve_no_data">本手环有定时测量和主动测量机制,若未到定时测量时间,
+        则不会有测量数据弹出 ; 您也可以使用客户端设置界面里” 量一下 ” 主动测量. 如果长时间无数据显示,
+        请查看主页右上角的手环电量显示,没有电时请及时充电后在使用.</string>
+    <string name="help_solve_ble_disconnect"> 请先确认您的手机已经开启蓝牙,并确保手环有电,并将手机靠近手环.手环会自动与手机连接.
+如果手环已经解绑 , 请重新绑定手机.</string>
+
+    <!--阶段报告-->
+    <string name="report_heart_rate">心率</string>
+    <string name="report_blooth_pressure">血压</string>
+    <string name="report_blooth_step">计步</string>
+
+    <!--dialog-->
+    <string name="dialog_bind_mobile">修改绑定手机号?</string>
+    <string name="dialog_input_mobile">请输入您的手机号</string>
+    <string name="dialog_input_code">请输入验证码</string>
+    <string name="dialog_send_code">发送验证码</string>
+    <string name="dialog_install_now">立即更新</string>
+
+    <!--我的血压-->
+    <string name="user_my_bloothpressure">我的血压参考值</string>
+    <string name="user_my_breath">我的呼吸</string>
+    <string name="user_my_heart_rate">我的心率</string>
+    <string name="user_my_step">我的运动计步</string>
+    <string name="user_my_tired">我的及时测量结果</string>
+    <string name="user_my_emotion">我的情绪</string>
+
+    <!--我的呼吸-->
+    <string name="my_breath_test_state">测试状态</string>
+    <string name="mybreath_test_stop">静止</string>
+    <string name="mybreath_result_good">理想</string>
+
+    <!--我的测量结果-->
+    <string name="measure_result_hint">输入文字记录当下状态</string>
+    <string name="measure_result_tired_grade">疲劳程度：</string>
+    <string name="measure_result_tired_middle">中度疲劳</string>
+    <string name="measure_result_tips">您的身心有些疲惫，如果能停下来，就休息一下吧</string>
+    <string name="measure_result_analyse">精神不饱满，或有有疲乏、腿痛、心悸的感觉，注意力和效率低下</string>
+
+    <!--我的运动计步-->
+    <string name="step_total_walking">总步行数</string>
+    <string name="step_walking_unit">步</string>
+    <string name="step_walking_kilometers">步行公里数</string>
+    <string name="step_kilometers">千米</string>
+    <string name="step_energy">消耗卡里路</string>
+    <string name="step_energy_unit">千卡</string>
+    <string name="step_energy_info">相当于#个苹果的热量</string>
+
+    <string name="cb_chart_nodata">亲,没有数据哦</string>
+
+
+    <!-- 分享 -->
+    <string name="share_title">SmartBracelet</string>
+    <string name="share_content">生活本应如此！精致、精彩、精心的生活就在这里。</string>
+    <string name="share_sina_not_installed">系统检测到未安装新浪微博客户端</string>
+    <string name="share_sina_success">分享到新浪微博成功</string>
+    <string name="share_sina_cancel">取消分享到新浪微博</string>
+    <string name="share_sina_failure">分享失败</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_wechatmoments">朋友圈</string>
+    <string name="share_wechat">微信好友</string>
+    <string name="qzone">qq空间</string>
+    <string name="qq">qq</string>
+    <string name="share_sinaweibo">新浪微博</string>
+    <string name="share_cancel_share">取消分享</string>
+    <string name="default_share_img">http://cms.clife.cn/logo.png</string>
+
+
+    <!--BLE-->
+    <string name="ble_not_support">您的手机暂不支持蓝牙</string>
+    <string name="ble_not_support_4_0">您的手机不支持蓝牙4.0</string>
+
+
+    <!--绑定-->
+    <string name="binding">正在绑定……</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="about_smart_bracelet">1.隐私条款\n\t\t手环重视您的个人隐私和您存储在我们的服务器中的内容
+    ,本隐私条款解释及其关联公司会收集关于您的哪些信息及其原因,以及我们会如何使用这些信息以及如何处理您的内容。\n
+    \n\n2.产品申明\n\t\t
+    未经本公司书面许可，不得以任何方式或理由对上述产品、服务、信息、材料的任何部分进行使用、复制、修改、传播或
+    与其他产品使用与销售</string>
+
+</resources>

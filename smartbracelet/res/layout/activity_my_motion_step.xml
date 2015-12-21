@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- <include layout="@layout/smartbracelet_topbar"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF22AB63"
+        android:paddingTop="@dimen/dimens15">
+
+        <TextView
+            android:id="@+id/motion_step_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80分"
+            style="@style/Style.Text.Tag"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/motion_step_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/motion_step_grade"
+            android:text="今天(周日)活动量得分"
+            style="@style/Style.Text.Tag"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true" />
+
+        <lecho.lib.hellocharts.view.ColumnChartView
+            android:id="@+id/motion_step_bargrah"
+            android:layout_below="@+id/motion_step_time"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </RelativeLayout>
+
+
+    <include layout="@layout/item_step_total" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <include layout="@layout/item_step_kilometers" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <include layout="@layout/item_step_energy" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+</LinearLayout>

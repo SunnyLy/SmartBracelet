@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_topbar" />
+
+    <TextView
+        android:id="@+id/about_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无版本更新"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/textcolor_9B"
+        android:textSize="@dimen/common_textsize_middle" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/about_version_app"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="@string/update_version_app"
+        app:item_rightText="V1.2E"
+        app:item_showDiliver="false"
+        app:item_isShowRight="false" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/about_version_smart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="@string/update_version_solid"
+        app:item_rightText="@string/update_getting"
+        app:item_showDiliver="false"
+        app:item_isShowRight="false" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/about_smart_serialize"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="@string/update_smart_serialize"
+        app:item_rightText="@string/update_getting"
+        app:item_showDiliver="false"
+        app:item_isShowRight="false" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+
+    <com.het.comres.view.layout.ItemLinearLayout
+        android:id="@+id/about_smart_mac"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        app:item_funcName="@string/update_smart_mac"
+        app:item_rightText="FD:33:93:AA:FE:DD"
+        app:item_showDiliver="false"
+        app:item_isShowRight="false" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_e6"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/tired_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="@string/measure_result_hint"
+        android:minHeight="100dp"
+        android:padding="@dimen/dimens15" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Style.Text.Tag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_common_topbar"
+            android:text="@string/common_cancel" />
+
+        <View style="@style/Style.Divider.Vertical" />
+
+        <Button
+            style="@style/Style.Text.Tag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_common_topbar"
+            android:text="@string/base_save" />
+
+    </LinearLayout>
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens10"
+        android:background="@color/white"
+        android:padding="@dimen/dimens15">
+
+        <TextView
+            android:id="@+id/measure_time"
+            style="@style/Style.Text.Tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="今天 10：00" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_my_bloothpressure_step" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimens50"
+            android:layout_height="@dimen/dimens50"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_measure_result_tired" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/measure_result_tired_grade" />
+
+        <TextView
+            android:id="@+id/measure_tired_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/measure_result_tired_middle"
+            android:textSize="@dimen/textSize18" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/measure_result_tips"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimens15"
+        android:paddingRight="@dimen/dimens15"
+        android:paddingBottom="@dimen/dimens15"
+        android:textColor="#FF343339"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/measure_analyse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/measure_result_analyse"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimens15"
+        android:paddingRight="@dimen/dimens15"
+        android:paddingBottom="@dimen/dimens15"
+        android:textColor="#FFB8B8B8"
+        android:textSize="@dimen/textSize14" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+</LinearLayout>

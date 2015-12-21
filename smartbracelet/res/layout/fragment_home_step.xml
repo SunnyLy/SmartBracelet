@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_home_step"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color_f8"
+    android:layout_marginLeft="@dimen/dimens15"
+    android:layout_marginRight="@dimen/dimens15"
+    android:layout_marginTop="@dimen/dimens10"
+    android:paddingBottom="@dimen/dimens15"
+    android:paddingTop="@dimen/dimens15">
+
+    <ImageView
+        android:id="@+id/home_step_icon"
+        android:layout_width="@dimen/dimens50"
+        android:layout_height="@dimen/dimens50"
+        android:src="@mipmap/ic_state_walk_orange"
+        android:paddingLeft="@dimen/dimens15"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true" />
+
+
+    <TextView
+        android:id="@+id/home_step_time"
+        style="@style/Style.Text.Tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens5"
+        android:layout_toRightOf="@+id/home_step_icon"
+        android:layout_alignTop="@+id/home_step_icon"
+        android:paddingTop="@dimen/dimens5"
+        android:text="今天 10:00" />
+
+    <TextView
+        android:id="@+id/home_step_proj_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Style.Text.Indicate"
+        android:text="@string/home_step"
+        android:layout_marginLeft="@dimen/dimens5"
+        android:layout_below="@+id/home_step_time"
+        android:layout_toRightOf="@+id/home_step_icon" />
+
+    <TextView
+        android:id="@+id/home_step_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Style.Text.Tag"
+        android:text="@string/home_re_value"
+        android:layout_marginLeft="@dimen/dimens5"
+        android:layout_below="@+id/home_step_time"
+        android:layout_toRightOf="@+id/home_step_proj_name" />
+
+    <TextView
+        android:id="@+id/home_step_proj_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Style.Text.Indicate"
+        android:text="130/90"
+        android:layout_marginLeft="@dimen/dimens5"
+        android:layout_below="@+id/home_step_time"
+        android:layout_toRightOf="@+id/home_step_state" />
+
+    <ImageView
+        android:id="@+id/home_step_item_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_home_more"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimens15"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- background color -->
+    <color name="common_bg_color">#EC1B23</color>
+    <color name="bg_color_e0">#FFE0E0E0</color>
+    <color name="bg_color_a5">#FFA5A5A5</color>
+    <color name="bg_color_b5">#FFB5B5B5</color>
+    <color name="bg_color_fa">#FFFAFAFA</color>
+    <color name="bg_color_f4">#FFF4F4F4</color>
+    <color name="bg_color_f8">#FFF8F8F8</color>
+    <color name="bg_color_e6">#FFE6E6E6</color>
+    <color name="bg_scene">#FFEBEEF5</color>
+    <color name="common_black_alpha_ee">#EE000000</color>
+    <color name="common_black_alpha_aa">#AA000000</color>
+    <color name="common_black_alpha_99">#99000000</color>
+    <color name="common_black_alpha_77">#77000000</color>
+    <color name="common_black_alpha_55">#55000000</color>
+    <color name="common_black_alpha_33">#33000000</color>
+    <color name="common_orange_text_btn">#FFFF7747</color>
+    <color name="common_blue_text_btn">#FF259CF8</color>
+
+
+    <!-- red -->
+    <color name="red">#FF0000</color>
+    <color name="red_ec5962">#FFEC5962</color>
+    <color name="textcolor_red_little">#FFE75B5D</color>
+    <color name="bg_gray_more">#FFE7E7E7</color>
+    <!-- textcolor -->
+    <color name="textColor_defalut">#FF878787</color>
+    <color name="textcolor_gray">#FF757575</color>
+    <color name="textcolor_default_gray">#FFB2B2B2</color>
+    <color name="textcolor_bc">#FFBCBCBF</color>
+    <color name="textcolor_hint">#FFD5D5D5</color>
+    <color name="textcolor_tag">#FF545454</color>
+    <color name="textcolor_post_title">#FF1E1E1E</color>
+    <color name="textcolor_indicate">#FF363636</color>
+    <color name="textcolor_popup">#FF808080</color>
+    <color name="textcolor_blue">#FF2E7BD3</color>
+    <color name="textcolor_blue_little">#FF69B2F7</color>
+    <color name="textcolor_blue_device_tag">#FF6F9DDE</color>
+    <color name="textcolor_blue_check">#AA4B91F6</color>
+    <color name="textcolor_blue_uncheck">#FF4B91F6</color>
+    <color name="common_pink">#FFFA8DB9</color>
+
+    <!-- From AddDeviceActivity -->
+    <color name="login_titleblueColor">#FF2E7BD3</color>
+
+    <!--首页设备状态颜色-->
+    <color name="device_online">#FFD4E6FF</color>
+    <color name="device_offline">#FFE7E7E7</color>
+    <color name="device_innormal">#FFFFCCCC</color>
+
+    <!-- actionbar_header -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- common_dialog_layout -->
+    <color name="welcome_page_textBlue">#2E7BD3</color>
+    <color name="diliverColor">#FFB5B5B5</color>
+
+    <!-- het_dialog_bg -->
+    <color name="half_black">#5f000000</color>
+    <color name="onlineservice_qianhui_hint">#9a9a9a</color>
+    <color name="grav_me">#C9C9C9</color>
+    <color name="linebg">#ffd6d6d6</color>
+    <color name="whitesmoke">#F5F5F5</color>
+
+    <color name="asr_state_none">#33ffffff</color>
+    <color name="asr_state_start">#ff43a1f0</color>
+    <color name="asr_state_error">#ffed5d5d</color>
+    <color name="asr_bg_color">#CC000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_bg">#DEDEDE</color>
+    <color name="translucent_background">#e0000000</color>
+    <color name="list_view_background">#E6E6E6</color>
+
+    <!--circle introduction-->
+    <color name="circle_intro_textPrimary">#ff4d4d4d</color>
+    <color name="circle_intro_textSecondary">#ffb2b2b2</color>
+    <color name="circle_intro_textBlue">#ff4891f6</color>
+    <color name="circle_intro_background">#ffe5e5e6</color>
+    <color name="iv_pressed_color">#22000000</color>
+
+    <color name="sliding_text_color">#FF929292</color>
+
+    <color name="textcolor_9B">#FF9B9B9B</color>
+    <color name="textcolor_e2">#FFE2E2E2</color>
+
+    <!--扫一扫-->
+    <!--QR_Code-->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#80000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <color name="cb_test_analysis_chart1">#ffff92c8</color>
+    <color name="cb_test_analysis_chart2">#ff73d2ff</color>
+    <color name="cb_test_analysis_chart3">#ffa4a2ff</color>
+    <color name="cb_test_analysis_chart4">#ffffdc71</color>
+    <color name="cb_test_analysis_chart5">#2673d2ff</color>
+    <color name="cb_test_analysis_chart6">#26ffe671</color>
+    <color name="cb_test_analysis_chart7">#ff75b8f7</color>
+    <color name="cb_test_analysis_chart8">#ff6edbb6</color>
+    <color name="cb_test_analysis_chart9">#FEAD6E</color>
+    <color name="cb_test_analysis_chart10">#79DAB7</color>
+
+
+</resources>

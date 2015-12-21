@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_f8"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_topbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens15"
+        android:background="@color/gray_bg" />
+
+    <TextView
+        android:id="@+id/bind_device_mac"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="dd3312a32252" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <com.het.comres.view.edittext.ClearEditText
+        android:id="@+id/bind_device_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:paddingRight="@dimen/dimens15"
+        android:paddingLeft="@dimen/dimens15"
+        android:hint="请输入手机号"
+        android:gravity="center"
+        android:background="@color/white" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+
+    <Button
+        android:id="@+id/bind_divice_bind"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:background="@drawable/btn_finish_selector"
+        android:text="开始绑定"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/dimens15"
+        android:layout_marginRight="@dimen/dimens15"
+        android:layout_marginTop="@dimen/dimens30" />
+
+
+</LinearLayout>

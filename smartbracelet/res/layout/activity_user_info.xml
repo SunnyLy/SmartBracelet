@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_topbar" />
+
+
+        <include layout="@layout/item_userinfo_checksex" />
+
+        <View
+            style="@style/Style.Divider.Horizontal.Default"
+            android:layout_marginLeft="@dimen/dimens15"
+            android:layout_marginRight="@dimen/dimens15" />
+
+        <com.het.comres.view.layout.ItemLinearLayout
+            android:id="@+id/item_userinfo_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_btn_height"
+            app:item_funcName="@string/userinfo_birthday"
+            app:item_rightText="1987.01.01"
+            app:item_text_color="@color/textcolor_tag" />
+
+        <com.het.comres.view.layout.ItemLinearLayout
+            android:id="@+id/item_userinfo_weight"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_btn_height"
+            app:item_funcName="@string/userinfo_weight"
+            app:item_rightText="60"
+            app:item_text_color="@color/textcolor_tag" />
+
+        <com.het.comres.view.layout.ItemLinearLayout
+            android:id="@+id/item_userinfo_height"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_btn_height"
+            app:item_funcName="@string/userinfo_height"
+            app:item_rightText="200"
+            app:item_text_color="@color/textcolor_tag" />
+
+
+        <include layout="@layout/item_userinfo_hands" />
+
+        <View
+            style="@style/Style.Divider.Horizontal.Default"
+            android:layout_marginLeft="@dimen/dimens15"
+            android:layout_marginRight="@dimen/dimens15" />
+
+        <com.het.comres.view.layout.ItemLinearLayout
+            android:id="@+id/item_userinfo_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_btn_height"
+            app:item_funcName="@string/userinfo_bind_mobile"
+            app:item_rightText="15914077946"
+            app:item_text_color="@color/textcolor_tag" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/dimens15"
+        android:background="@color/list_view_background">
+
+        <Button
+            android:id="@+id/user_info_commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_btn_height"
+            android:text="@string/base_finish"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_finish_selector"
+            android:textSize="@dimen/textSize18" />
+    </RelativeLayout>
+
+</merge>

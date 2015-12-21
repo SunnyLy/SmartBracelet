@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_dialog_bg"
+    android:paddingLeft="@dimen/dimens15"
+    android:paddingRight="@dimen/dimens15"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_comm_dialog_message"
+        style="@style/common_dialogText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp"
+        android:drawablePadding="@dimen/dimens10"
+        android:drawableTop="@mipmap/icon_alert"
+        android:text="@string/dialog_bind_mobile" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimens10">
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="地区码" />
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/tv_area"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimens10"
+            android:layout_marginRight="@dimen/dimens20"
+            android:layout_height="40dp"
+            android:background="@drawable/area_num_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="中国" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_down"
+                android:text="+86"
+                android:layout_marginRight="10dp" />
+
+
+            <ImageView
+                android:id="@+id/iv_down"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_phone_area_choose"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <EditText
+        android:id="@+id/input_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height"
+        android:background="@null"
+        android:textSize="@dimen/common_textsize_middle"
+        android:hint="@string/dialog_input_mobile" />
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_btn_height">
+
+        <Button
+            android:id="@+id/send_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/common_top_bar_color"
+            android:text="@string/dialog_send_code"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/dimens15"
+            android:paddingRight="@dimen/dimens15"
+            android:textSize="@dimen/common_textsize_middle" />
+
+        <EditText
+            android:id="@+id/input_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_btn_height"
+            android:background="@null"
+            android:layout_toLeftOf="@+id/send_code"
+            android:textSize="@dimen/common_textsize_middle"
+            android:hint="@string/dialog_input_code" />
+
+    </RelativeLayout>
+
+    <View style="@style/Style.Divider.Horizontal.Default" />
+
+</LinearLayout>

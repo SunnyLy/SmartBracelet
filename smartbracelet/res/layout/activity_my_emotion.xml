@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- <include layout="@layout/smartbracelet_topbar"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFDA733"
+        android:paddingTop="@dimen/dimens15">
+
+        <ImageView
+            android:id="@+id/icon_my_emotion"
+            android:layout_width="@dimen/dimens55"
+            android:layout_height="@dimen/dimens55"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/icon_emotion_happy" />
+
+        <TextView
+            android:id="@+id/my_emotion_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icon_my_emotion"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimens10"
+            android:text="平和"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize18" />
+
+        <TextView
+            android:id="@+id/my_emotion_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_emotion_state"
+            android:layout_centerHorizontal="true"
+            android:text="12月20日 14：38"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize16" />
+
+        <com.smartbracelet.sunny.ui.widget.EmotionStateLayout
+            android:id="@+id/my_emotion_layout"
+            android:layout_below="@+id/my_emotion_record_time"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/emotion_state_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens15"
+        android:text="您很平和"
+        android:textColor="#FF2C2F2F"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/emotion_state_anlyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimens15"
+        android:paddingRight="@dimen/dimens15"
+        android:text="平和是一种心灵的平静和满足。拥有平和的心境就拥有美好和幸福。"
+        android:textColor="#FF696C6C"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/emotion_state_idicate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens15"
+        android:text="情绪小贴士"
+        android:textColor="#FF2C2F2F"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/emotion_state_idicate_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimens15"
+        android:paddingRight="@dimen/dimens15"
+        android:text="孔子说过：\'仁者不忧，智者不惑，勇者不惧。\'拥有平和的心态，是个人修养的开始。"
+        android:textColor="#FF696C6C"
+        android:textSize="@dimen/textSize14" />
+
+
+</LinearLayout>
