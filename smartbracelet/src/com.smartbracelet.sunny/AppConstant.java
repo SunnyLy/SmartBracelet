@@ -61,12 +61,12 @@ public class AppConstant {
     public static final String SINA_APP_KEY = "3475229326";
     public static final String SINA_APP_SECRET = "ae17e55e0dd8963661b5c2f23a47a452";
     //QQ
-    public static final String QQAppID = "1104541762";
-    public static final String QQ_APP_KEY = "XGoQYHamMHZNqlEU";
+    public static final String QQAppID = "1104959645";
+    public static final String QQ_APP_KEY = "8qWSwpljIEgbFEeU";
 
     // 公司官网
-    public static final String CLIFE_OFFICIAL_URL = "http://www.clife.net/";
-    public static final String SHARE_TARGET_URL = "http://wechat.hetyj.com/web-wechat/mobile/cLife/clifeapp-download/clife.html";
+    public static final String CLIFE_OFFICIAL_URL = " http://www.daorigin.com";
+    public static final String SHARE_TARGET_URL = " http://www.daorigin.com";
 
     public static boolean DEBUG = true;
 
