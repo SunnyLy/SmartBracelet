@@ -1,8 +1,10 @@
 package com.smartbracelet.sunny.utils;
 
+import android.content.Context;
+import android.support.annotation.StringRes;
 import android.text.TextUtils;
 
-import com.smartbracelet.sunny.model.BloodPressure;
+import com.smartbracelet.sunny.R;
 import com.smartbracelet.sunny.model.UserModel;
 
 import java.util.Date;
@@ -24,6 +26,25 @@ public class DataCalculateUtils {
     private static final int HEART_RATE_QUICK = 2;
     private static double breathRate = 0;
 
+    private Context mContext;
+    private static DataCalculateUtils mInstance;
+
+    public DataCalculateUtils(Context context) {
+        this.mContext = context;
+    }
+
+    public static DataCalculateUtils getInstance(Context context) {
+        if (mInstance == null) {
+            mInstance = new DataCalculateUtils(context);
+        }
+
+        return mInstance;
+    }
+
+    private String getString(@StringRes int resId) {
+        return mContext.getResources().getString(resId);
+    }
+
     /**
      * 1.计算能量消耗
      * 公式：
@@ -42,7 +63,7 @@ public class DataCalculateUtils {
      * 　　比萨/小份302千卡
      * 　　意大利通心粉/份500千卡
      */
-    public static String calculateEnergy(UserModel userModel, int totalStep, long totalTime) {
+    public String calculateEnergy(UserModel userModel, int totalStep, long totalTime) {
         String energy = "";
         String sex = userModel.getSex();
         String height = userModel.getHeight();
@@ -82,7 +103,7 @@ public class DataCalculateUtils {
      * 老年人:
      * 65岁以后 老年期   步数与呼吸频率3.15, 即: 30步/4
      */
-    public static double calculateBreathRate(UserModel userModel, int totalStep) {
+    public double calculateBreathRate(UserModel userModel, int totalStep) {
 
         double rate = getBreathRate(userModel.getBirthday());
         return rate * totalStep / 30;
@@ -94,7 +115,7 @@ public class DataCalculateUtils {
      * @param birthday
      * @return
      */
-    private static double getBreathRate(String birthday) {
+    private double getBreathRate(String birthday) {
         int age = 1;
         if (TextUtils.isEmpty(birthday)) {
             age = 1;
@@ -141,8 +162,8 @@ public class DataCalculateUtils {
      * 极重度疲劳              （ 120.05±1.11） * （1+0.042）         （ 75.32±0.92）* （1+0.042）
      * 提示： 您感觉眼睛酸痛、发胀、干涩、视力模糊。 需要马上停下来休息！
      */
-    public static String calculateTired(String sbp, String dbp) {
-        String tiredInfo = "您的身心正常，状态很好！";
+    public String calculateTired(String sbp, String dbp) {
+        String tiredInfo = getString(R.string.tired_normal);
         //正常的收缩压与舒张压
         double normalSMax = 120.05 + 1.11;
         double normalSMin = 120.05 - 1.11;
@@ -180,28 +201,28 @@ public class DataCalculateUtils {
         //轻度疲劳
         if (((sdbDouble > normalSMax) && (sdbDouble <= littleTiredSMax)) &&
                 (((ddbDouble > normalDMax) && (ddbDouble <= littleTiredDMax)))) {
-            tiredInfo = "您的身心已经开始有疲惫的倾向了！ 精神比较饱满、有点疲惫感、注意力开始不集中啦。";
+            tiredInfo = getString(R.string.tired_light_tired_info);
             return tiredInfo;
         }
 
         //中度疲劳
         if (((sdbDouble > littleTiredSMax) && (sdbDouble <= middleTiredSMax)) &&
                 (((ddbDouble > littleTiredDMax) && (ddbDouble <= middleTiredDMax)))) {
-            tiredInfo = "您的身心有些疲劳，如果能停下来，就休息一下吧。精神不饱满、或有有疲乏、腿疼的感觉，注意力和效率低下。";
+            tiredInfo = getString(R.string.tired_middle_tired_info);
             return tiredInfo;
         }
 
         //重度疲劳
         if (((sdbDouble > middleTiredSMax) && (sdbDouble <= highTiredSMax)) &&
                 (((ddbDouble > middleTiredDMax) && (ddbDouble <= highTiredDMax)))) {
-            tiredInfo = "您的身心已感觉到很疲劳，请停下来休息，否则会影响您的身心健康。";
+            tiredInfo = getString(R.string.tired_high_tired_info);
             return tiredInfo;
         }
 
         //极度疲劳
         if (((sdbDouble > highTiredSMax) && (sdbDouble <= xHighTiredSMax)) &&
                 (((ddbDouble > highTiredDMax) && (ddbDouble <= xHighTiredDMax)))) {
-            tiredInfo = "您感觉眼睛酸痛、发胀、干涩、视力模糊。 需要马上停下来休息！";
+            tiredInfo = getString(R.string.tired_xHigh_tired_info);
             return tiredInfo;
         }
 
@@ -232,7 +253,7 @@ public class DataCalculateUtils {
      * 心率在 160～220次/分，常称为阵发性心动过速
      * 心率低于60次/分者（一般在40次/分以上），称为窦性心动过缓。
      */
-    public static String calculateMood(UserModel userModel, String heartRate) {
+    public String calculateMood(UserModel userModel, String heartRate) {
 
         String moodInfo = "";
         String birthday = userModel.getBirthday();
@@ -243,18 +264,18 @@ public class DataCalculateUtils {
         if (age <= 1) {
             //1岁内新生儿(30~40次/分)
             if (breathRate >= 30 && breathRate <= 40 && heart >= 100) {
-                moodInfo = "平和";
+                moodInfo = getString(R.string.mood_normal);
             } else if (breathRate > 40) {
-                moodInfo = "激动";
+                moodInfo = getString(R.string.mood_happy);
             }
 
 
         } else if (age >= 2 && age <= 3) {
             //2~3岁内（25~30次/分)
             if (breathRate >= 25 && breathRate <= 30 && heart >= 100) {
-                moodInfo = "平和";
+                moodInfo = getString(R.string.mood_normal);
             } else if (breathRate > 30 && heart > 160) {
-                moodInfo = "激动";
+                moodInfo = getString(R.string.mood_happy);
             }
         } else if (age >= 4 && age <= 7) {
             //4~7岁内(20~25次/分）
@@ -263,11 +284,11 @@ public class DataCalculateUtils {
             if (age >= 60) {
                 //成年人
                 if (heart < 50 && breathRate < 15) {
-                    moodInfo = "消沉";
+                    moodInfo = getString(R.string.mood_depressed);
                 } else if (heart > 100 && breathRate > 20) {
-                    moodInfo = "激动";
+                    moodInfo = getString(R.string.mood_happy);
                 } else if ((heart >= 60 && heart <= 80) && (breathRate >= 12 && breathRate <= 20)) {
-                    moodInfo = "平和";
+                    moodInfo = getString(R.string.mood_normal);
                 }
             }
 
@@ -291,7 +312,7 @@ public class DataCalculateUtils {
      * 注意: 饮食 低盐、低脂、低胆固醇、低热量的饮食，以植物油为主，减少含饱和脂肪酸的肥肉或肉类制品，
      * 动物内脏含胆固醇高，应少吃，多进食高维生素的食物，如蔬菜、水果、新鲜乳类。忌饮咖啡、浓茶、酒等刺激性食物，酒已被认为是高血压的发病因素应戒酒。
      */
-    public static String calculateBloothPressure(UserModel userModel, String sdp, String ddp) {
+    public String calculateBloothPressure(UserModel userModel, String sdp, String ddp) {
 
         String bloothPressureInfo = "";
         Date date = DateTime.getDateByFormat(userModel.getBirthday(), DateTime.DEFYMD);
@@ -299,16 +320,11 @@ public class DataCalculateUtils {
         int sbdp = Integer.valueOf(sdp);
         int dbdp = Integer.valueOf(ddp);
         if ((sbdp >= 90 && sbdp <= 140) && (dbdp >= 60 && dbdp <= 90)) {
-            bloothPressureInfo = "血压正常";
+            bloothPressureInfo = getString(R.string.blooth_pressure_normal);
         } else if (sbdp < 90 && dbdp < 60) {
-            bloothPressureInfo = "病情轻微症状可有：头晕、头痛、食欲不振、疲劳、脸色苍白、消化不良、晕车船等；\n" +
-                    "严重症状包括：直立性眩晕、四肢冷、心悸、呼吸困难、共济失调、发音含糊、甚至昏厥、需长期卧床。\n" +
-                    "主要原因：血压下降，导致血液循环缓慢，远端毛细血管缺血，以致影响组织细胞氧气和营养的供应，二氧化碳及代谢废物的排泄。\n" +
-                    "主要危害：视力、听力下降，诱发或加重老年性痴呆，头晕、昏厥、跌倒、骨折发生率大大增加。";
+            bloothPressureInfo = getString(R.string.blooth_pressure_low_tips);
         } else if (sbdp > 140 && dbdp > 90) {
-            bloothPressureInfo = "表现为头晕、头痛、心悸等，随着受损器官出现的并发症而有明显的症状。\n" +
-                    "注意: 饮食 低盐、低脂、低胆固醇、低热量的饮食，以植物油为主，减少含饱和脂肪酸的肥肉或肉类制品，\n" +
-                    "动物内脏含胆固醇高，应少吃，多进食高维生素的食物，如蔬菜、水果、新鲜乳类。忌饮咖啡、浓茶、酒等刺激性食物，酒已被认为是高血压的发病因素应戒酒。";
+            bloothPressureInfo = getString(R.string.blooth_pressure_high_tips);
         }
 
         return bloothPressureInfo;
@@ -333,7 +349,7 @@ public class DataCalculateUtils {
      * 心率过缓: 心率低于60次/分者（一般在40次/分以上）,可见于长期从事重体力劳动和运动员；
      * 病理性的见于甲状腺机能低下、颅内压增高、阻塞性黄疸、以及洋地黄、奎尼丁或心得安类药物过量或中毒。
      */
-    public static String calculateHeartRate(UserModel userModel, String heart) {
+    public String calculateHeartRate(UserModel userModel, String heart) {
         if (TextUtils.isEmpty(heart)) {
             throw new NullPointerException("the heart may not be null");
         }
@@ -344,27 +360,27 @@ public class DataCalculateUtils {
         //先算正常的
         if (age <= 1) {
             if (heartRate >= 130 && heartRate < 150) {
-                heartRateInfo = "心率正常";
+                heartRateInfo = getString(R.string.heart_rate_normal);
             } else if (heartRate > 150) {
-                heartRateInfo = "心率快速";
+                heartRateInfo = getString(R.string.heart_rate_quick_tips);
             }
         } else if (age > 1 && age <= 3) {
             if (heartRate > 100) {
-                heartRateInfo = "心率正常";
+                heartRateInfo = getString(R.string.heart_rate_normal);
             }
         } else if (age >= 4 && age < 60) {
             if (heartRate >= 60 && heartRate <= 100) {
-                heartRateInfo = "心率正常";
+                heartRateInfo = getString(R.string.heart_rate_normal);
             } else if (heartRate > 100) {
-                heartRateInfo = "心率快速";
+                heartRateInfo = getString(R.string.heart_rate_quick_tips);
             } else if (heartRate < 60) {
-                heartRateInfo = "心率过缓";
+                heartRateInfo = getString(R.string.heart_rate_low_tips);
             }
         } else if (age >= 60) {
             if (heartRate >= 40 && heartRate <= 60) {
-                heartRateInfo = "心率正常";
+                heartRateInfo = getString(R.string.heart_rate_normal_tips);
             } else if (heartRate > 100) {
-                heartRateInfo = "心率快速";
+                heartRateInfo = getString(R.string.heart_rate_quick_tips);
             }
         }
 
@@ -381,7 +397,7 @@ public class DataCalculateUtils {
      * 慢跑：每小时,得分 6分; (以7-9公里/小时的速度为快为慢跑)
      * 快跑：每小时, 得分7分; (以10公里/小时以上的速度为快为慢跑)
      */
-    public static int calculateStepGrade(int totalStep, long totalTimes) {
+    public int calculateStepGrade(int totalStep, long totalTimes) {
 
         int grade = 0;
 

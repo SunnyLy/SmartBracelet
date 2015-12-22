@@ -109,6 +109,43 @@
     <string name="user_my_bloothpressure_tips">\t\t本产品通过检测动态血压趋势的方式统计生物节律 , 以帮助人们更健康的生活 , 不能作为任何诊断相关的依据 .
         注 : 动态血压与医学诊断使用的诊室血压并非同一个概念 。</string>
 
+
+    <!--疲劳提示语-->
+    <string name="tired_normal">您的身心正常，状态很好！</string>
+    <string name="tired_light_tired">轻度疲劳</string>
+    <string name="tired_light_tired_info">提示： 您的身心已经开始有疲惫的倾向了！ 精神比较饱满、有点疲惫感、注意力开始不集中啦。</string>
+    <string name="tired_middle_tired">中度疲劳</string>
+    <string name="tired_middle_tired_info">提示： 您的身心有些疲劳，如果能停下来，就休息一下吧。精神不饱满、或有有疲乏、腿疼的感觉，注意力和效率低下。</string>
+    <string name="tired_high_tired">重度疲劳</string>
+    <string name="tired_high_tired_info">提示：您的身心已感觉到很疲劳，请停下来休息，否则会影响您的身心健康。</string>
+    <string name="tired_xHigh_tired">极重度疲劳</string>
+    <string name="tired_xHigh_tired_info">提示：您感觉眼睛酸痛、发胀、干涩、视力模糊。 需要马上停下来休息！</string>
+
+    <!--情绪提示语-->
+    <string name="mood_normal">平和 :  心率正常</string>
+    <string name="mood_happy">激动 :  心率偏高</string>
+    <string name="mood_depressed">消沉 :  心率偏低</string>
+
+    <!-- 血压提示语-->
+    <string name="blooth_pressure_normal">您的血压正常</string>
+    <string name="blooth_pressure_tips">请继续保持健康的生活方式。</string>
+    <string name="blooth_pressure_high">您的血压偏高</string>
+    <string name="blooth_pressure_high_tips">表现为头晕、头痛、心悸等，随着受损器官出现的并发症而有明显的症状。</string>
+    <string name="blooth_pressure_low">血压偏低</string>
+    <string name="blooth_pressure_low_tips">您的血压偏低
+	病情轻微症状可有：头晕、头痛、食欲不振、疲劳、脸色苍白等；严重症状包括：直立性眩晕、四肢冷、心悸、呼吸困难、需长期卧床。
+Tip:     注意: 饮食 低盐、低脂、低胆固醇、低热量的饮食，以植物油为主，减少含饱和脂肪酸的肥肉或肉类制品,多进食高维生素的食物，如蔬菜、水果、新鲜乳类。</string>
+
+    <!--心率提示语-->
+    <string name="heart_rate_normal">您的心率正常</string>
+    <string name="heart_rate_normal_tips">请继续保持健康的生活方式</string>
+    <string name="heart_rate_low">您的心跳较慢</string>
+    <string name="heart_rate_low_tips">常见于长期从事重体力劳动和运动员；病理性的见于甲状腺机能低下、颅内压增高、阻塞性黄疸、心得安类药物过量或中毒。</string>
+    <string name="heart_rate_quick">您的心跳较快</string>
+    <string name="heart_rate_quick_tips">常见于正常人运动、兴奋、吸烟、饮酒和喝浓茶后。也可见于发热、休克、贫血、甲亢、心力衰竭及应用阿托品、肾上腺素、麻黄素等。</string>
+    <string name="heart_rate_tips">静息心率保持在60次左右为佳,应常常参加各种强度适宜的有氧运动，使心功能得到锻炼; 保持适当体重,肥胖会使心脏负担加重，心率加快，因此肥胖者要通过健身运动，调节饮食来保持适宜的体重。同时还要注意戒烟与限酒。</string>
+    <string name="heart_rate_warnings"> 本产品通过检测动态心率趋势的方式统计生物节律 , 以帮助人们更健康的生活 , 不能作为任何诊断相关的依据 .  注 : 动态心率与医学诊断使用的诊室心率并非同一个概念。</string>
+
     <!--我的呼吸-->
     <string name="my_breath_test_state">测试状态</string>
     <string name="mybreath_test_stop">静止</string>

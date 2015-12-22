@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.internal.widget.ViewUtils;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewAnimationUtils;
@@ -22,6 +23,7 @@ import com.smartbracelet.sunny.manager.UserManager;
 import com.smartbracelet.sunny.model.TimeBloodPressure;
 import com.smartbracelet.sunny.model.event.BaseEvent;
 import com.smartbracelet.sunny.model.event.BloothPressureEvent;
+import com.smartbracelet.sunny.utils.DataCalculateUtils;
 import com.smartbracelet.sunny.utils.Json2Model;
 import com.smartbracelet.sunny.utils.SunnyChartHelp;
 
@@ -74,6 +76,8 @@ public class BloothPressureFragment extends BaseFragment {
     private UserManager mUserManager;
 
     private List<TimeBloodPressure> mTimeBloodPressureDatas = new ArrayList<>();
+
+    private DataCalculateUtils mDataCalculate;
 
 
     //下面是图表参数========================
@@ -135,6 +139,8 @@ public class BloothPressureFragment extends BaseFragment {
 
         mChartHelp = new SunnyChartHelp(mContext);
 
+        mDataCalculate = DataCalculateUtils.getInstance(mContext);
+
     }
 
 
@@ -154,6 +160,12 @@ public class BloothPressureFragment extends BaseFragment {
         LogUtils.e("BloothRessureFragment,onResume====");
         mBloodResult.setText(mTestValue);
         mBloodTestTime.setText(mTestTime);
+
+        String[] result = mTestValue.split("/");
+        if (TextUtils.isEmpty(result[0])) {
+            return;
+        }
+        mDataCalculate.calculateBloothPressure(mUserManager.getUserModel(), result[0], result[1]);
     }
 
     @Override
