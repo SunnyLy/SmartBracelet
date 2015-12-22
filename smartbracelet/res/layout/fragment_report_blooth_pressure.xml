@@ -21,10 +21,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="状况很理想\n理想理想民\n理想民\n理想" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

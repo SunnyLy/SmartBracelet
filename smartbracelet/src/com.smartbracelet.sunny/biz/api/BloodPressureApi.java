@@ -49,12 +49,14 @@ public class BloodPressureApi extends BaseApi {
      *
      * @param callback
      * @param userId
+     * @param type 查询类型：day(天)，month（月)
      * @param startTime
      * @param endTime
      */
-    public void getTimeBloodPresserue(ICallback callback, String userId, String startTime, String endTime) {
+    public void getTimeBloodPresserue(ICallback callback, String userId, String type, String startTime, String endTime) {
         RequestParams params = getRequestParams();
         params.addQueryStringParameter("userID", userId);
+        params.addQueryStringParameter("type", type);
         params.addQueryStringParameter("startTime", startTime);
         params.addQueryStringParameter("endTime", endTime);
         setRequestParams(params);

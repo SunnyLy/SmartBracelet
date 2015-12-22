@@ -100,6 +100,7 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
 
     private UserManager mUserManager;
     private String mUserId;
+    private static final String QUERY_TYPE = "day";
 
     private BloothPressureFragment mBloothPressureFragment;
     private BreathPressureFragment mBreathPressureFragment;
@@ -410,7 +411,7 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
             public void onFailure(int code, String msg, int id) {
                 handleFailure(code, msg);
             }
-        }, mUserId, String.valueOf(mStartTime), String.valueOf(mEndTime));
+        }, mUserId, QUERY_TYPE, String.valueOf(mStartTime), String.valueOf(mEndTime));
     }
 
     /**
@@ -438,7 +439,7 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
             public void onFailure(int code, String msg, int id) {
                 handleFailure(code, msg);
             }
-        }, mUserId, String.valueOf(mStartTime), String.valueOf(mEndTime));
+        }, mUserId, QUERY_TYPE, String.valueOf(mStartTime), String.valueOf(mEndTime));
     }
 
     /**
@@ -458,7 +459,7 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
             public void onFailure(int code, String msg, int id) {
                 handleFailure(code, msg);
             }
-        }, mUserId, String.valueOf(mStartTime), String.valueOf(mEndTime));
+        }, mUserId, QUERY_TYPE, String.valueOf(mStartTime), String.valueOf(mEndTime));
     }
 
 

@@ -21,11 +21,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/red"
-                android:text="测试结果\n测试结果\n测试结果\n测试结果\n测试结果\n测试结果\n" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
