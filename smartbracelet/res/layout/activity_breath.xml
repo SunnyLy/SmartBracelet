@@ -20,7 +20,7 @@
             <com.smartbracelet.sunny.ui.widget.view.DivisionCircle
                 android:id="@+id/breath_division_circle"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 android:background="#FFA9475E" />
 
             <include layout="@layout/item_test_state_result" />

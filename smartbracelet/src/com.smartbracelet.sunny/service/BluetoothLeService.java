@@ -24,6 +24,8 @@ import android.util.Log;
 import com.het.common.constant.Configs;
 import com.het.common.utils.LogUtils;
 import com.het.comres.view.dialog.CommonToast;
+import com.smartbracelet.sunny.callback.IBleConnectCallback;
+import com.smartbracelet.sunny.manager.CommBluetoothManager;
 import com.smartbracelet.sunny.model.ble.GattAttributes;
 
 import java.util.List;
@@ -264,7 +266,7 @@ public class BluetoothLeService extends Service {
      * @param address
      * @return
      */
-    public boolean connect(final String address) {
+    public boolean connect(final String address, IBleConnectCallback callback) {
 
         if (mBluetoothAdapter == null || address == null) {
             throw new NullPointerException("the BluetoothAdapter or the remote device " +
@@ -284,9 +286,15 @@ public class BluetoothLeService extends Service {
 
         //开始连接设备
         LogUtils.e("getRemoteDevice:", "正在获取指定Mac的设备对象");
+        if (callback != null) {
+            callback.startConnect();
+        }
         final BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
         if (device == null) {
             LogUtils.e("device not found.");
+            if (callback != null) {
+                callback.notFoundDevice();
+            }
             return false;
         }
 

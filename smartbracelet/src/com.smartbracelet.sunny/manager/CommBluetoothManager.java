@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
@@ -15,8 +16,11 @@ import android.os.Handler;
 import android.os.IBinder;
 
 import com.het.common.utils.LogUtils;
+import com.het.comres.view.dialog.CommPrompDialog;
+import com.het.comres.view.dialog.CommonLoadingDialog;
 import com.het.comres.view.dialog.CommonToast;
 import com.smartbracelet.sunny.R;
+import com.smartbracelet.sunny.callback.IBleConnectCallback;
 import com.smartbracelet.sunny.model.event.BleConnectEvent;
 import com.smartbracelet.sunny.service.BluetoothLeService;
 
@@ -28,9 +32,9 @@ import java.util.List;
  * 公共蓝牙管理类
  */
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-public class CommBluetoothManager {
+public class CommBluetoothManager implements IBleConnectCallback {
 
-    private Context mContext;
+    public Context mContext;
 
     private static final int SCAN_TEIME_DEF = 10000;//扫描10秒后关闭
     private static final int DEVICE_TYPE = 2;//蓝牙设备类型，可能根据它来自动连接
@@ -52,8 +56,11 @@ public class CommBluetoothManager {
 
     private Handler mHandler;
 
+    private CommonLoadingDialog mLoadingDialog;
+
     public CommBluetoothManager(Context context) {
         this.mContext = context;
+        mLoadingDialog = new CommonLoadingDialog(context);
         mBluetoothManager = (BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = mBluetoothManager.getAdapter();
         mHandler = new Handler();
@@ -85,6 +92,7 @@ public class CommBluetoothManager {
                         + ",deviceType:" + device.getType());
                 if (deviceType == DEVICE_TYPE) {
                     DEVICE_ADDRESS = device.getAddress();
+                    mLoadingDialog.setText("扫描到蓝牙设备，准备自动连接……");
                     CommonToast.showToast(mContext, "扫描到蓝牙设备，准备自动连接……");
                     autoToConnectBLE();
                     mBluetoothAdapter.stopLeScan(mLeScanCallback);
@@ -107,14 +115,18 @@ public class CommBluetoothManager {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             //app与系统服务连接成功，开始获取蓝牙服务
+            mLoadingDialog.setText("连接连接成功");
             LogUtils.e("onServiceConnected", "ServiceConnection连接成功，开始与设备连接:Mac:" + DEVICE_ADDRESS);
             mBluetoothService = ((BluetoothLeService.LocalBinder) service).getService();
             if (!mBluetoothService.initialize()) {
                 LogUtils.e("Unable to initialize Bluetooth");
             }
 
-            boolean connect = mBluetoothService.connect(DEVICE_ADDRESS);
+            boolean connect = mBluetoothService.connect(DEVICE_ADDRESS, CommBluetoothManager.this);
             LogUtils.e("连接：" + connect + ",mac:" + DEVICE_ADDRESS);
+            if (connect) {
+                mLoadingDialog.dismiss();
+            }
 
         }
 
@@ -123,6 +135,9 @@ public class CommBluetoothManager {
             //app与系统服务连接断开
             LogUtils.e("onServiceDisconnected", "ServiceConnection服务断开");
             mBluetoothService = null;
+            if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+                mLoadingDialog.dismiss();
+            }
         }
     };
 
@@ -167,13 +182,55 @@ public class CommBluetoothManager {
                 @Override
                 public void run() {
                     mBluetoothAdapter.stopLeScan(mLeScanCallback);
+                    CommonToast.showToast(mContext, "扫描失败！");
+                    hidDialog();
+                    showReconnectDialog();
                 }
             }, SCAN_TEIME_DEF);
             mBluetoothDeviceLists.clear();
+            mLoadingDialog.setText("正在扫描蓝牙设备……");
+            mLoadingDialog.show();
             CommonToast.showToast(mContext, "正在扫描蓝牙设备……");
             mBluetoothAdapter.startLeScan(mLeScanCallback);
         } else {
             mBluetoothAdapter.stopLeScan(mLeScanCallback);
+        }
+    }
+
+    /**
+     * 显示重连对话框
+     */
+    private void showReconnectDialog() {
+
+        CommPrompDialog reConnectDialog = new CommPrompDialog.Builder(mContext)
+                .setTitle("扫描失败")
+                .setMessage("扫描失败,重新扫描？")
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .setPositiveButton("重扫", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        scanBleDevices(true);
+                        dialog.dismiss();
+                    }
+                }).create();
+        reConnectDialog.show();
+    }
+
+    private void hidDialog() {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+            mLoadingDialog.dismiss();
+        }
+    }
+
+    private void showDialog(String msg) {
+        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
+            mLoadingDialog.setText(msg);
+            mLoadingDialog.show();
         }
     }
 
@@ -186,9 +243,12 @@ public class CommBluetoothManager {
 
 
     public void onEventMainThread(BleConnectEvent event) {
-        //发起重连
-        CommonToast.showToast(mContext, "准备重连");
-        resetConnect();
+        if (event != null) {
+            //发起重连
+            mLoadingDialog.setText("准备重连……");
+            CommonToast.showToast(mContext, "准备重连");
+            resetConnect();
+        }
     }
 
     /**
@@ -197,12 +257,43 @@ public class CommBluetoothManager {
     public void resetConnect() {
         try {
             while (mBluetoothService.mConnectedState != 2) {
+                mLoadingDialog.setText("正在重连，请稍后……");
                 CommonToast.showToast(mContext, "正在重连，请稍后……");
                 mHandler.postDelayed(new resetConnectThread(), 1000);
             }
         } catch (Exception e) {
             LogUtils.e("reset Device error!");
+            CommonToast.showToast(mContext, "连接失败！");
+            mLoadingDialog.dismiss();
+
         }
+    }
+
+    @Override
+    public void startConnect() {
+
+        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
+            mLoadingDialog.setText("开始连接");
+            mLoadingDialog.show();
+        }
+    }
+
+    @Override
+    public void notFoundDevice() {
+
+        showDialog("未发现蓝牙设备");
+    }
+
+    @Override
+    public void connectSuccess() {
+
+        showDialog("蓝牙连接成功");
+    }
+
+    @Override
+    public void connectFailure() {
+        hidDialog();
+        CommonToast.showToast(mContext, "蓝牙断开连接");
     }
 
     /**
@@ -211,9 +302,18 @@ public class CommBluetoothManager {
      * @author Autumn
      */
     public class resetConnectThread implements Runnable {
+        private IBleConnectCallback connectCallback;
+
+        public resetConnectThread() {
+
+        }
+
+        public resetConnectThread(IBleConnectCallback callback) {
+            this.connectCallback = callback;
+        }
         @Override
         public void run() {
-            mBluetoothService.connect(DEVICE_ADDRESS);
+            mBluetoothService.connect(DEVICE_ADDRESS, connectCallback);
         }
     }
 

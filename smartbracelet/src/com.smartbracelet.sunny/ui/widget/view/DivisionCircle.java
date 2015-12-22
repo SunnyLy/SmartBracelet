@@ -9,6 +9,7 @@ import android.graphics.Point;
 import android.graphics.RectF;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
 
 import com.het.common.utils.TimeUtils;
@@ -19,6 +20,12 @@ import com.het.common.utils.TimeUtils;
  */
 public class DivisionCircle extends View {
     private Context mContext;
+
+    private int mHorizontalPadding = 50;
+    private int mVerticalPadding = 50;
+
+    private int mViewWidth;//控件的宽度
+    private int mViewHeight;//摈的高度
 
     private static final int RADIUS_DEF = 200;
     private static final int CIRCLE_X = 300;
@@ -44,7 +51,13 @@ public class DivisionCircle extends View {
 
     public void setmValue(int mValue) {
         this.mValue = mValue;
-        this.mAgle = mValue / 3 == 0 ? ((mValue / 3) * unitAngle) : ((mValue / 3) * unitAngle + (mValue % 3) * (unitAngle / 3));
+        if (mValue == 10) {
+            mAgle = 0;
+        } else if (mValue == 30) {
+            mAgle = 180;
+        } else {
+            this.mAgle = mValue / 3 == 0 ? ((mValue / 3) * unitAngle) : ((mValue / 3) * unitAngle + (mValue % 3) * (unitAngle / 3));
+        }
     }
 
     public void setmRadius(int mRadius) {
@@ -79,6 +92,10 @@ public class DivisionCircle extends View {
     private void initView(Context context, AttributeSet attrs) {
         mContext = context;
 
+        mHorizontalPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                mHorizontalPadding, getResources().getDisplayMetrics());
+        mVerticalPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                mVerticalPadding, getResources().getDisplayMetrics());
 
         initPaint();
     }
@@ -163,10 +180,14 @@ public class DivisionCircle extends View {
         canvas.drawColor(0xFFA9475E);
 
         RectF rectF = new RectF();
-        rectF.left = 100;
-        rectF.top = 100;
-        rectF.right = rectF.left + 200 * 2;
-        rectF.bottom = rectF.top + 200 * 2;
+        rectF.left = mHorizontalPadding;
+        rectF.top = mVerticalPadding;
+        mViewWidth = getWidth() - mHorizontalPadding * 2;
+        mViewHeight = getHeight() < 300 ? 300 : getHeight() - mVerticalPadding;
+        rectF.right = rectF.left + mViewWidth;
+        rectF.bottom = rectF.top + mViewHeight;
+        int px = (int) rectF.centerX();
+        int py = (int) rectF.centerY();
         /**
          * 画扇形，startAngle:扇形起始点角度
          *  sweepAngle:扇形扫过的角度
@@ -187,7 +208,7 @@ public class DivisionCircle extends View {
             //画刻度值
             //hOffset:画文字的起始位置
             //vOffset:<0,在路径上方，>0在路径下方
-            if (i + 10 > 29) {
+            if (i + 10 > 30) {
                 break;
             }
             if (((i + 1) % 2) != 0) {
@@ -215,17 +236,17 @@ public class DivisionCircle extends View {
 
         //canvas.restore();//restore()就是保存已经画好的，重新开始一块新的画布
         //再画刻度盘中间的圆
-        canvas.drawCircle(300, 300, 100, mCirclePaint);
+        canvas.drawCircle(px, py, 100, mCirclePaint);
 
         //再画圆中的小圆
-        canvas.drawCircle(300, 300, 20, mSmallCirclePaint);
+        canvas.drawCircle(px, py, 20, mSmallCirclePaint);
         //画指针
         Point pointStart = getPoint(mAgle, unitAngle, mRadius, circleX, circleY);
-        canvas.drawLine(pointStart.x, pointStart.y, 300, 300, mSmallCirclePaint);
+        canvas.drawLine(pointStart.x, pointStart.y, px, py, mSmallCirclePaint);
 
         //画文字
-        canvas.drawText(mValue + "次/分", 270, 450, mTagPaint);
-        canvas.drawText(TextUtils.isEmpty(mTime) ? "" : mTime, 270, 480, mTagPaint);
+        canvas.drawText(mValue + "次/分", px - 30, py + 140, mTagPaint);
+        canvas.drawText(TextUtils.isEmpty(mTime) ? "" : mTime, px - 20, py + 170, mTagPaint);
 
     }
 
@@ -257,7 +278,7 @@ public class DivisionCircle extends View {
             point.y = (int) (circleY - Math.abs(circleRadius * Math.sin((angle - 45))));
         } else if (angle > 90 && angle <= 180) {
             point.x = (int) (circleX + Math.abs(circleRadius * Math.sin((angle - 135))));
-            point.y = (int) (circleY - Math.abs(circleRadius * Math.cos((angle - 135))));
+            point.y = (int) (circleY - Math.abs(circleRadius * Math.cos((angle - 135)))) - 20;
         }
         return point;
     }

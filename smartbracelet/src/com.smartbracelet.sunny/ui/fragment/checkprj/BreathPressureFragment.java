@@ -129,7 +129,7 @@ public class BreathPressureFragment extends BaseFragment {
         mBreathDivisionCircle.setCircleY(300);
         mBreathDivisionCircle.setmRadius(200);
         mBreathDivisionCircle.setmTime(mTestTime);
-        mBreathDivisionCircle.setmValue(TextUtils.isEmpty(mTestValue) ? 0 : Integer.valueOf(mTestValue));
+        mBreathDivisionCircle.setmValue(TextUtils.isEmpty(mTestValue) ? 20 : Integer.valueOf(mTestValue));
         mBreathDivisionCircle.invalidate();
     }
 
