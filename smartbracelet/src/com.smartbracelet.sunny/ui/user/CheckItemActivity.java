@@ -33,6 +33,7 @@ import com.smartbracelet.sunny.base.BaseActivity;
 import com.smartbracelet.sunny.biz.api.BloodPressureApi;
 import com.smartbracelet.sunny.biz.api.BreathRateApi;
 import com.smartbracelet.sunny.biz.api.HeartRateApi;
+import com.smartbracelet.sunny.biz.api.MoodApi;
 import com.smartbracelet.sunny.biz.api.StepApi;
 import com.smartbracelet.sunny.biz.api.TiredApi;
 import com.smartbracelet.sunny.manager.UserManager;
@@ -40,6 +41,7 @@ import com.smartbracelet.sunny.manager.share.ShareManager;
 import com.smartbracelet.sunny.model.event.BaseEvent;
 import com.smartbracelet.sunny.model.event.BloothPressureEvent;
 import com.smartbracelet.sunny.model.event.HeartPressureEvent;
+import com.smartbracelet.sunny.model.event.MoodEvent;
 import com.smartbracelet.sunny.model.event.StepEvent;
 import com.smartbracelet.sunny.ui.fragment.checkprj.BloothPressureFragment;
 import com.smartbracelet.sunny.ui.fragment.checkprj.BreathPressureFragment;
@@ -388,8 +390,33 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
         } else if ("step".equals(mFragmentTag)) {
             //运动计步
             getStepByTime();
+        }else if("mood".equals(mFragmentTag)){
+            //情绪
+            //getMood();
         }
 
+    }
+
+    /**
+     * 获取情绪信息
+     */
+    private void getMood() {
+
+        new MoodApi().getMood(new ICallback() {
+            @Override
+            public void onSuccess(Object o, int id) {
+
+                hideDialog();
+                MoodEvent moodEvent = new MoodEvent();
+                moodEvent.setObject(o);
+                EventBus.getDefault().post(moodEvent);
+            }
+
+            @Override
+            public void onFailure(int code, String msg, int id) {
+                handleFailure(code, msg);
+            }
+        },mUserId);
     }
 
     /**
@@ -401,7 +428,6 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
             @Override
             public void onSuccess(Object o, int id) {
                 hideDialog();
-                //// TODO: 2015/11/29 所有的获取成功后，都用EventBus来传递数值
                 StepEvent stepEvent = new StepEvent();
                 stepEvent.setObject(o);
                 EventBus.getDefault().post(stepEvent);

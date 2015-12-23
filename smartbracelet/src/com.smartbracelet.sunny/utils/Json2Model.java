@@ -70,7 +70,8 @@ public class Json2Model {
             JSONObject jsonObject = new JSONObject(json);
             JSONArray jsonArray = null;
             if (!jsonObject.has(key)) {
-                throw new IllegalArgumentException("the key is not exist,please to sure ");
+                return null;
+               // throw new IllegalArgumentException("the key is not exist,please to sure ");
             }
             jsonArray = jsonObject.getJSONArray(key);
             if (jsonArray != null && jsonArray.length() > 0) {
