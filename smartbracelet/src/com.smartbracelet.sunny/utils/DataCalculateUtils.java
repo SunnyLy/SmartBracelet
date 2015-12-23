@@ -313,6 +313,9 @@ public class DataCalculateUtils {
      * 动物内脏含胆固醇高，应少吃，多进食高维生素的食物，如蔬菜、水果、新鲜乳类。忌饮咖啡、浓茶、酒等刺激性食物，酒已被认为是高血压的发病因素应戒酒。
      */
     public String calculateBloothPressure(UserModel userModel, String sdp, String ddp) {
+        if(userModel == null){
+            throw new NullPointerException("the userModel cannot be null");
+        }
 
         String bloothPressureInfo = "";
         Date date = DateTime.getDateByFormat(userModel.getBirthday(), DateTime.DEFYMD);

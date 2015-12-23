@@ -161,8 +161,15 @@ public class BloothPressureFragment extends BaseFragment {
         mBloodResult.setText(mTestValue);
         mBloodTestTime.setText(mTestTime);
 
+        if(TextUtils.isEmpty(mTestValue)){
+            return;
+        }
+
         String[] result = mTestValue.split("/");
         if (TextUtils.isEmpty(result[0])) {
+            return;
+        }
+        if(mUserManager.getUserModel() == null){
             return;
         }
         mDataCalculate.calculateBloothPressure(mUserManager.getUserModel(), result[0], result[1]);
