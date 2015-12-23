@@ -135,7 +135,7 @@ public class HeartRateFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         LogUtils.e("HeartRateFragment,onResume====");
-        mHeartRateValue.setCurrentValue(TextUtils.isEmpty(getTestValue()) ? 0 : Integer.valueOf(getTestValue()));
+        mHeartRateValue.setCurrentValue(TextUtils.isEmpty(getTestValue()) ? 80 : Integer.valueOf(getTestValue()));
     }
 
     @Override

@@ -11,7 +11,7 @@
     <com.smartbracelet.sunny.ui.widget.view.DivisionCircle2
         android:id="@+id/heart_rate_value"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_gravity="center_horizontal" />
 
     <include layout="@layout/item_test_state_result" />
