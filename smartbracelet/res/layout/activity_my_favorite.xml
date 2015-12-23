@@ -6,4 +6,6 @@
 
     <include layout="@layout/common_topbar" />
 
+    <include layout="@layout/widght_report_empty_view"/>
+
 </LinearLayout>

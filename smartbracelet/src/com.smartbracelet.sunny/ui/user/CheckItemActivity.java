@@ -36,6 +36,7 @@ import com.smartbracelet.sunny.biz.api.HeartRateApi;
 import com.smartbracelet.sunny.biz.api.MoodApi;
 import com.smartbracelet.sunny.biz.api.StepApi;
 import com.smartbracelet.sunny.biz.api.TiredApi;
+import com.smartbracelet.sunny.biz.api.UserApi;
 import com.smartbracelet.sunny.manager.UserManager;
 import com.smartbracelet.sunny.manager.share.ShareManager;
 import com.smartbracelet.sunny.model.event.BaseEvent;
@@ -50,6 +51,7 @@ import com.smartbracelet.sunny.ui.fragment.checkprj.MoodFragment;
 import com.smartbracelet.sunny.ui.fragment.checkprj.StepFragment;
 import com.smartbracelet.sunny.ui.fragment.checkprj.TiredFragment;
 import com.smartbracelet.sunny.utils.DateTime;
+import com.smartbracelet.sunny.utils.SimpleJsonParseUtils;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzoneShare;
 import com.tencent.tauth.IUiListener;
@@ -71,6 +73,8 @@ import de.greenrobot.event.EventBus;
  */
 public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Response {
     public static final String TAG = MyBloothPressureActivity.class.getSimpleName();
+    private static final String RESULT_OK = "1001";//成功
+    private static final String RESULT_FAILURE = "1002";//失败
     private static Context context;
 
     @InjectView(R.id.smart_bracelet_topbar)
@@ -320,7 +324,7 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
     public void initParams() {
     }
 
-    @OnClick({R.id.left_image, R.id.smart_bracelet_share, R.id.measure_time_icon})
+    @OnClick({R.id.left_image, R.id.smart_bracelet_share, R.id.smart_bracelet_favorite, R.id.measure_time_icon})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -335,6 +339,11 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
                 mEndTime = DateTime.getLastDayOfWeek(new Date(currentDate));
                 showDialog();
                 getDataByTime();
+                break;
+
+            case R.id.smart_bracelet_favorite:
+                //收藏
+                favorite();
                 break;
 
             case R.id.smart_bracelet_share:
@@ -375,6 +384,40 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
         }
     }
 
+    /**
+     * 点击收藏
+     */
+    private void favorite() {
+
+        String content = mTestValue + "," + mTestTime;
+        showDialog();
+        new UserApi().addFavorite(new ICallback() {
+            @Override
+            public void onSuccess(Object o, int id) {
+
+                hideDialog();
+                String msg = "";
+                if (o != null) {
+                    String result = SimpleJsonParseUtils.getResult((String) o, "result");
+                    if (RESULT_OK.equals(result)) {
+                        msg = "收藏成功";
+                    } else if (RESULT_FAILURE.equals(result)) {
+                        msg = "收藏失败";
+                    }
+
+                    CommonToast.showToast(mContext, msg);
+                }
+            }
+
+            @Override
+            public void onFailure(int code, String msg, int id) {
+
+                handleFailure(code, msg);
+
+            }
+        }, mUserId, content);
+    }
+
 
     private void getDataByTime() {
 
@@ -390,7 +433,7 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
         } else if ("step".equals(mFragmentTag)) {
             //运动计步
             getStepByTime();
-        }else if("mood".equals(mFragmentTag)){
+        } else if ("mood".equals(mFragmentTag)) {
             //情绪
             //getMood();
         }
@@ -416,7 +459,7 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
             public void onFailure(int code, String msg, int id) {
                 handleFailure(code, msg);
             }
-        },mUserId);
+        }, mUserId);
     }
 
     /**

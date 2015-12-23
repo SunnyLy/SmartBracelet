@@ -87,4 +87,35 @@ public class UserApi extends BaseApi {
         realCommit(callback, AppConstant.REQUEST_URL, AppConstant.SET_PASSWORD_ACTION, HttpRequest.HttpMethod.GET);
     }
 
+    /**
+     * 3.23添加收藏
+     * @param callback
+     * @param userId
+     * @param content
+     */
+    public void addFavorite(ICallback callback,String userId,String content){
+
+        RequestParams params = getRequestParams();
+        params.addQueryStringParameter("userID",userId);
+        params.addQueryStringParameter("content",content);
+        setRequestParams(params);
+        realCommit(callback,AppConstant.REQUEST_URL,AppConstant.ADD_FAVORITE,HttpRequest.HttpMethod.GET);
+
+    }
+
+    /**
+     * 3.24查询收藏
+     * 注：这个接口是有问题，
+     * 请求参数至少得要有一个userId作为唯一标记
+     * @param callback
+     * @param userId
+     */
+    public void queryFavorite(ICallback callback,String userId){
+        RequestParams params = getRequestParams();
+       // params.addQueryStringParameter("userID",userId);
+        setRequestParams(params);
+        realCommit(callback,AppConstant.REQUEST_URL,AppConstant.QUERY_FAVORITE,HttpRequest.HttpMethod.GET);
+
+    }
+
 }

@@ -172,7 +172,8 @@ public class BloothPressureFragment extends BaseFragment {
         if(mUserManager.getUserModel() == null){
             return;
         }
-        mDataCalculate.calculateBloothPressure(mUserManager.getUserModel(), result[0], result[1]);
+       String  bloothPressure =  mDataCalculate.calculateBloothPressure(mUserManager.getUserModel(), result[0], result[1]);
+        LogUtils.e("血压："+bloothPressure);
     }
 
     @Override

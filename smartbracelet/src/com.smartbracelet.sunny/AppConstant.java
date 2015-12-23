@@ -37,6 +37,11 @@ public class AppConstant {
     public static final String GET_TIME_HEART_PRESSURE_ACTION = "getHeartPressure.action";
     public static final String GET_PERSONAL_ACTION = "getPersonInfo.action";
 
+    //添加收藏
+    public static final String ADD_FAVORITE = "addCollect.action";
+    //查询收藏
+    public static final String QUERY_FAVORITE = "findCollects.action";
+
     //set
     public static final String SET_BLOOD_PRESSURE_ACTION = "setBloodPressure.action";
     public static final String SET_HEART_PRESSURE_ACTION = "setHearthPressure.action";
