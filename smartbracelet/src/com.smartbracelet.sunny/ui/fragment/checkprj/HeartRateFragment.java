@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.het.common.callback.ICallback;
 import com.het.common.utils.LogUtils;
@@ -19,9 +20,11 @@ import com.smartbracelet.sunny.biz.api.BloodPressureApi;
 import com.smartbracelet.sunny.biz.api.HeartRateApi;
 import com.smartbracelet.sunny.manager.UserManager;
 import com.smartbracelet.sunny.model.TimeBloodPressure;
+import com.smartbracelet.sunny.model.UserModel;
 import com.smartbracelet.sunny.model.event.BaseEvent;
 import com.smartbracelet.sunny.model.event.HeartPressureEvent;
 import com.smartbracelet.sunny.ui.widget.view.DivisionCircle2;
+import com.smartbracelet.sunny.utils.DataCalculateUtils;
 import com.smartbracelet.sunny.utils.Json2Model;
 import com.smartbracelet.sunny.utils.SunnyChartHelp;
 
@@ -51,6 +54,13 @@ public class HeartRateFragment extends BaseFragment {
     @InjectView(R.id.heart_rate_value)
     DivisionCircle2 mHeartRateValue;
 
+    @InjectView(R.id.tv_test_result)
+    TextView mHeartRateTitle;
+    @InjectView(R.id.tv_test_result_analyse)
+    TextView mHeartRateAnalyze;
+    @InjectView(R.id.tv_health_detail)
+    TextView mHeartRateTips;
+
     @InjectView(R.id.layout_result)
     LinearLayout mLayoutResult;
     @InjectView(R.id.indicate_arrow)
@@ -63,6 +73,8 @@ public class HeartRateFragment extends BaseFragment {
     private String mTestTime;
     private String mUserId;
     private UserManager mUserManager;
+    private UserModel mUserModel;
+    private DataCalculateUtils mCalculateUtils;
 
 
     @InjectView(R.id.heart_rate_chart_data)
@@ -117,8 +129,10 @@ public class HeartRateFragment extends BaseFragment {
         mTestResult.setImageResource(R.mipmap.icon_my_heartrate_result);
         mUserManager = UserManager.getInstance();
         mUserId = mUserManager.getUserModel() == null ? "1" : mUserManager.getUserModel().getUserID();
+        mUserModel = mUserManager.getUserModel();
 
         mChartHelp = new SunnyChartHelp(mContext);
+        mCalculateUtils = DataCalculateUtils.getInstance(mContext);
     }
 
     @Override
@@ -136,6 +150,28 @@ public class HeartRateFragment extends BaseFragment {
         super.onResume();
         LogUtils.e("HeartRateFragment,onResume====");
         mHeartRateValue.setCurrentValue(TextUtils.isEmpty(getTestValue()) ? 80 : Integer.valueOf(getTestValue()));
+
+        getHeartRate(getTestValue());
+    }
+
+    /**
+     * 根据值计算心率
+     *
+     * @param heartRate
+     */
+    private void getHeartRate(String heartRate) {
+        if (mUserModel == null) {
+            return;
+        }
+
+        String result = mCalculateUtils.calculateHeartRate(mUserModel == null ? new UserModel() : mUserModel, heartRate);
+        String[] resultDetail = result.split("&");
+        String heartRateTitle = resultDetail[0];
+        String heartRateAnalyze = resultDetail[1];
+
+        mHeartRateTitle.setText(heartRateTitle);
+        mHeartRateAnalyze.setText(heartRateAnalyze);
+
     }
 
     @Override

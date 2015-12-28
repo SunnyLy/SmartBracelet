@@ -317,20 +317,27 @@ public class DataCalculateUtils {
             throw new NullPointerException("the userModel cannot be null");
         }
 
+        String bloothPressureTitle = "";
         String bloothPressureInfo = "";
+        StringBuilder bloothPressureResult = new StringBuilder();
         Date date = DateTime.getDateByFormat(userModel.getBirthday(), DateTime.DEFYMD);
         int age = DateTime.getAge(date);
         int sbdp = Integer.valueOf(sdp);
         int dbdp = Integer.valueOf(ddp);
         if ((sbdp >= 90 && sbdp <= 140) && (dbdp >= 60 && dbdp <= 90)) {
-            bloothPressureInfo = getString(R.string.blooth_pressure_normal);
+            bloothPressureTitle = getString(R.string.blooth_pressure_normal);
+            bloothPressureInfo = getString(R.string.blooth_pressure_tips);
         } else if (sbdp < 90 && dbdp < 60) {
+            bloothPressureTitle = getString(R.string.blooth_pressure_low);
             bloothPressureInfo = getString(R.string.blooth_pressure_low_tips);
         } else if (sbdp > 140 && dbdp > 90) {
+            bloothPressureTitle = getString(R.string.blooth_pressure_high);
             bloothPressureInfo = getString(R.string.blooth_pressure_high_tips);
         }
 
-        return bloothPressureInfo;
+        bloothPressureResult.append(bloothPressureTitle).append("&").append(bloothPressureInfo);
+
+        return bloothPressureResult.toString();
     }
 
     /**
@@ -354,41 +361,53 @@ public class DataCalculateUtils {
      */
     public String calculateHeartRate(UserModel userModel, String heart) {
         if (TextUtils.isEmpty(heart)) {
-            throw new NullPointerException("the heart may not be null");
+            heart = "0";
         }
-        String heartRateInfo = "";
+        String heartRateTitle = "";
+        String heartRateTips = "";
+        StringBuilder stringBuilder = new StringBuilder();
         int heartRate = Integer.valueOf(heart);
         Date date = DateTime.getDateByFormat(userModel.getBirthday(), DateTime.DEFYMD);
         int age = DateTime.getAge(date);
         //先算正常的
         if (age <= 1) {
             if (heartRate >= 130 && heartRate < 150) {
-                heartRateInfo = getString(R.string.heart_rate_normal);
+                heartRateTitle = getString(R.string.heart_rate_normal);
+                heartRateTips = getString(R.string.heart_rate_normal_tips);
             } else if (heartRate > 150) {
-                heartRateInfo = getString(R.string.heart_rate_quick_tips);
+                heartRateTitle = getString(R.string.heart_rate_quick);
+                heartRateTips = getString(R.string.heart_rate_quick_tips);
             }
         } else if (age > 1 && age <= 3) {
             if (heartRate > 100) {
-                heartRateInfo = getString(R.string.heart_rate_normal);
+                heartRateTitle = getString(R.string.heart_rate_normal);
+                heartRateTips = getString(R.string.heart_rate_normal_tips);
             }
         } else if (age >= 4 && age < 60) {
             if (heartRate >= 60 && heartRate <= 100) {
-                heartRateInfo = getString(R.string.heart_rate_normal);
+                heartRateTitle = getString(R.string.heart_rate_normal);
+                heartRateTips = getString(R.string.heart_rate_normal_tips);
             } else if (heartRate > 100) {
-                heartRateInfo = getString(R.string.heart_rate_quick_tips);
+                heartRateTitle = getString(R.string.heart_rate_quick);
+                heartRateTips = getString(R.string.heart_rate_quick_tips);
             } else if (heartRate < 60) {
-                heartRateInfo = getString(R.string.heart_rate_low_tips);
+                heartRateTips = getString(R.string.heart_rate_low_tips);
+                heartRateTitle = getString(R.string.heart_rate_low);
             }
         } else if (age >= 60) {
             if (heartRate >= 40 && heartRate <= 60) {
-                heartRateInfo = getString(R.string.heart_rate_normal_tips);
+                heartRateTips = getString(R.string.heart_rate_normal_tips);
+                heartRateTitle = getString(R.string.heart_rate_normal);
             } else if (heartRate > 100) {
-                heartRateInfo = getString(R.string.heart_rate_quick_tips);
+                heartRateTitle = getString(R.string.heart_rate_quick);
+                heartRateTips = getString(R.string.heart_rate_quick_tips);
             }
         }
 
 
-        return heartRateInfo;
+        stringBuilder.append(heartRateTitle).append("&").append(heartRateTips);
+
+        return stringBuilder.toString();
     }
 
     /**

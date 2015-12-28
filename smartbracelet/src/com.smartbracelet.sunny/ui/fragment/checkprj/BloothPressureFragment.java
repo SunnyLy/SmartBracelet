@@ -62,6 +62,13 @@ public class BloothPressureFragment extends BaseFragment {
     @InjectView(R.id.blooth_pressure_time)
     TextView mBloodTestTime;
 
+    @InjectView(R.id.tv_test_result)
+    TextView mBloothPressureTitle;
+    @InjectView(R.id.tv_test_result_analyse)
+    TextView mBloothPressureAnalyze;
+    @InjectView(R.id.tv_health_detail)
+    TextView mBloothPressureTips;
+
     @InjectView(R.id.layout_result)
     LinearLayout mLayoutResult;
     @InjectView(R.id.indicate_arrow)
@@ -173,6 +180,11 @@ public class BloothPressureFragment extends BaseFragment {
             return;
         }
        String  bloothPressure =  mDataCalculate.calculateBloothPressure(mUserManager.getUserModel(), result[0], result[1]);
+        String[] results = bloothPressure.split("&");
+        String bloothPressureTitle = results[0];
+        String bloothPressureAnalyze = results[1];
+        mBloothPressureTitle.setText(bloothPressureTitle);
+        mBloothPressureAnalyze.setText(bloothPressureAnalyze);
         LogUtils.e("血压："+bloothPressure);
     }
 
