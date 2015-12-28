@@ -59,18 +59,18 @@ public class AppConstant {
     public static final String GET_APP_VERSION_ACTION = "getAppVersion.action";
 
 
-    // 分享-Wechat
-    public static final String WeiXinAppID = "wx612dcd275bf8523e";
-    public static final String WeiXinAppSecret = "3c999d988a5c672527aff8daafec1598";
+    // 分享-Wechat：已是最新
+    public static final String WeiXinAppID = "wx413e6c049cdaaa14";
+    public static final String WeiXinAppSecret = "9a876ff21a5d216761c735cda24737c3";
 
-    // sina
+    // sina：因为暂时不做，所以先放个假的。
     public static final String SINA_APP_KEY = "3475229326";
     public static final String SINA_APP_SECRET = "ae17e55e0dd8963661b5c2f23a47a452";
-    //QQ
+    //QQ：已是最新
     public static final String QQAppID = "1104959645";
     public static final String QQ_APP_KEY = "8qWSwpljIEgbFEeU";
 
-    // 公司官网
+    // 公司官网：已是最新
     public static final String CLIFE_OFFICIAL_URL = " http://www.daorigin.com";
     public static final String SHARE_TARGET_URL = " http://www.daorigin.com";
 

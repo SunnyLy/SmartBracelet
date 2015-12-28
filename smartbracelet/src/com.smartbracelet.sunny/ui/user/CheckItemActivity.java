@@ -185,7 +185,8 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
     private void initShareParams() {
         mHandler = new SunnyHandler(mContext);
         mShareSummary = getResources().getString(R.string.share_content);
-        mShareImageUrl = getResources().getString(R.string.default_share_img);
+        //mShareImageUrl = getResources().getString(R.string.default_share_img);
+        mShareImageUrl = "";
         mShareTitle = getResources().getString(R.string.share_title);
         mShareTargetUrl = AppConstant.SHARE_TARGET_URL;
         mShareAppName = getResources().getString(R.string.share_title);
