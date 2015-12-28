@@ -5,11 +5,8 @@
     android:background="@color/list_view_background"
     android:orientation="vertical">
 
-    <com.het.comres.widget.CommonTopBar
-        android:id="@+id/common_top_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/common_bg_color" />
+   <include
+       layout="@layout/common_topbar"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,17 +32,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <ListView
-        android:id="@+id/home_lv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cacheColorHint="#000000"
-        android:divider="@null"
-        android:dividerHeight="5dp"
-        android:paddingLeft="@dimen/comm_padding"
-        android:paddingRight="@dimen/comm_padding"
-        android:scrollbars="none"
-        android:visibility="gone" />
 
 </LinearLayout>

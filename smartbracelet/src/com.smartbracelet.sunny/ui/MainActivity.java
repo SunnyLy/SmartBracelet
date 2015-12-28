@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initFragment();
-        initStatusBarColorTransparent();
+       // initStatusBarColorTransparent();
     }
 
     private void initFragment() {

@@ -74,8 +74,6 @@ public class HomeFragment extends BaseFragment {
 
     @InjectView(R.id.common_top_bar)
     CommonTopBar mCommonTopBar;
-    @InjectView(R.id.home_lv)
-    ListView mListView;
 
     @InjectView(R.id.item_home_blooth_pressure)
     RelativeLayout mItemBloothPressure;
@@ -370,11 +368,16 @@ public class HomeFragment extends BaseFragment {
                 mBundle.putString(CheckItemActivity.TAG, "tired");
                 mBundle.putString("testTime", bloothPressureTime);
                 mBundle.putString("testValue", tiredPressureValue);
+
+                BaseEvent baseEvent = new BaseEvent();
+                baseEvent.setEventType(BaseEvent.EventType.TIRED);
+                EventBus.getDefault().post(baseEvent);
                 break;
             case R.id.item_home_mood:
                 mBundle.putString(CheckItemActivity.TAG, "mood");
                 mBundle.putString("testTime", bloothPressureTime);
                 mBundle.putString("testValue", stepValue);
+
                 break;
             case R.id.item_home_step:
                 mBundle.putString(CheckItemActivity.TAG, "step");

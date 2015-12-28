@@ -24,6 +24,7 @@ import com.smartbracelet.sunny.model.event.BaseEvent;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import de.greenrobot.event.EventBus;
 
 /**
  * Created by sunny on 2015/11/28.
@@ -55,6 +56,7 @@ public class TiredFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_tired, null);
         ButterKnife.inject(this, view);
+        EventBus.getDefault().register(this);
         initParams();
         return view;
     }
@@ -72,6 +74,12 @@ public class TiredFragment extends BaseFragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        EventBus.getDefault().unregister(this);
     }
 
     @Override
