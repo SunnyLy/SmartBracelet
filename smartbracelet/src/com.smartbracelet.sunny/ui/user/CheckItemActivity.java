@@ -41,6 +41,7 @@ import com.smartbracelet.sunny.manager.UserManager;
 import com.smartbracelet.sunny.manager.share.ShareManager;
 import com.smartbracelet.sunny.model.event.BaseEvent;
 import com.smartbracelet.sunny.model.event.BloothPressureEvent;
+import com.smartbracelet.sunny.model.event.BreathPressureEvent;
 import com.smartbracelet.sunny.model.event.HeartPressureEvent;
 import com.smartbracelet.sunny.model.event.MoodEvent;
 import com.smartbracelet.sunny.model.event.StepEvent;
@@ -487,7 +488,21 @@ public class CheckItemActivity extends BaseActivity implements IWeiboHandler.Res
      * 获取时间段呼吸频率
      */
     private void getBreathPressureByTime() {
-        //// TODO: 2015/11/29 这个接口后台还没有加
+        new BreathRateApi().getBreathRateByTime(new ICallback() {
+            @Override
+            public void onSuccess(Object o, int id) {
+                hideDialog();
+                BreathPressureEvent breathPressureEvent = new BreathPressureEvent();
+                breathPressureEvent.setObject(o);
+                EventBus.getDefault().post(breathPressureEvent);
+            }
+
+            @Override
+            public void onFailure(int code, String msg, int id) {
+                handleFailure(code, msg);
+
+            }
+        },mUserId,String.valueOf(mStartTime),String.valueOf(mEndTime),QUERY_TYPE);
     }
 
     /**

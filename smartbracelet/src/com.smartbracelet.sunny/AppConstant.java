@@ -31,6 +31,7 @@ public class AppConstant {
     public static final String GET_HEART_BEAT_ACTION = "getHeartBeat.action";
     public static final String GET_BLOOR_PRESSURE_ACTION = "getBloodPressure.action";
     public static final String GET_BREATH_RATE_ACTION = "getBreathRate.action";
+    public static final String GET_BREATH_RATE_BY_TIME = "getTimeBreathRate.action";
     public static final String GET_STEP_ACTION = "getStep.action";
     public static final String GET_TIME_BLOOR_PRESSURE_ACTION = "getTimeBloodPresserue.action";
     public static final String GET_TIME_STEP_ACTION = "getStep.action";
