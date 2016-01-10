@@ -5,10 +5,13 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
+import com.het.common.utils.CommSharePreferencesUtil;
 import com.het.comres.view.layout.ItemLinearLayout;
+import com.smartbracelet.sunny.AppConstant;
 import com.smartbracelet.sunny.R;
 import com.smartbracelet.sunny.base.BaseFragment;
 import com.smartbracelet.sunny.model.event.BaseEvent;
@@ -16,6 +19,7 @@ import com.smartbracelet.sunny.ui.favorite.MyFavoriteActivity;
 import com.smartbracelet.sunny.ui.help.HelpActivity;
 import com.smartbracelet.sunny.ui.report.StageReportActivity;
 import com.smartbracelet.sunny.ui.set.SettingActivity;
+import com.smartbracelet.sunny.utils.ApkUtils;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -48,15 +52,24 @@ public class SlidingFragment extends BaseFragment implements CompoundButton.OnCh
     @InjectView(R.id.cb_tired)
     CheckBox mCBTired;
 
+    @InjectView(R.id.btn_sliding_change)
+    Button mBtnChange;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View slidingView = inflater.inflate(R.layout.fragment_sliding, null);
         ButterKnife.inject(this, slidingView);
+        if (ApkUtils.isApkDebugable(mContext)) {
+            setBtnState();
+        } else {
+            mBtnChange.setVisibility(View.GONE);
+        }
         return slidingView;
     }
 
-    @OnClick({R.id.sliding_setting, R.id.sliding_help, R.id.sliding_my_favorite, R.id.sliding_stage_report})
+    @OnClick({R.id.sliding_setting, R.id.sliding_help, R.id.sliding_my_favorite,
+            R.id.sliding_stage_report, R.id.btn_sliding_change})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -72,6 +85,23 @@ public class SlidingFragment extends BaseFragment implements CompoundButton.OnCh
             case R.id.sliding_stage_report:
                 StageReportActivity.startStageReportActivity(mContext);
                 break;
+            case R.id.btn_sliding_change:
+                setBtnState();
+                break;
+        }
+    }
+
+    /**
+     * 设置按钮切换模式
+     */
+    private void setBtnState() {
+        boolean isNet = CommSharePreferencesUtil.getBoolean(mContext, AppConstant.CONNECT_MODE);
+        if (isNet) {
+            mBtnChange.setText(mContext.getResources().getString(R.string.connect_mode_no));
+            CommSharePreferencesUtil.putBoolean(mContext, AppConstant.CONNECT_MODE, false);
+        } else {
+            mBtnChange.setText(mContext.getResources().getString(R.string.connect_mode_network));
+            CommSharePreferencesUtil.putBoolean(mContext, AppConstant.CONNECT_MODE, true);
         }
     }
 

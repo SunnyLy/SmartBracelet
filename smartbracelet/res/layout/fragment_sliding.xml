@@ -71,15 +71,28 @@
             <View style="@style/Style.Divider.SlidingFragment" />
 
             <!--量一下-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <com.het.comres.view.layout.ItemLinearLayout
                 android:id="@+id/sliding_settings"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/common_btn_height"
                 app:item_funcName="@string/measure"
                 app:item_text_color="@color/sliding_text_color"
                 app:item_isShowRight="false"
                 android:layout_marginLeft="@dimen/comm_padding"
                 app:item_showDiliver="false" />
+
+                <Button
+                    android:id="@+id/btn_sliding_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_mode_no"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimens30" />
+
+            </RelativeLayout>
 
             <include layout="@layout/widget_sliding_check_bloor_pressure" />
 
@@ -90,7 +103,6 @@
             <include layout="@layout/widget_sliding_check_emotion" />
 
             <include layout="@layout/widget_sliding_check_tired" />
-
 
             <!-- <include android:id="@+id/debug_widget" layout="@layout/widget_app_debug"/>-->
         </LinearLayout>

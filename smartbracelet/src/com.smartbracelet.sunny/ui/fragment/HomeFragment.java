@@ -32,6 +32,7 @@ import com.smartbracelet.sunny.AppConstant;
 import com.smartbracelet.sunny.R;
 import com.smartbracelet.sunny.adapter.HomeAdapter;
 import com.smartbracelet.sunny.base.BaseFragment;
+import com.smartbracelet.sunny.biz.api.DataUploadApi;
 import com.smartbracelet.sunny.biz.api.LoginApi;
 import com.smartbracelet.sunny.biz.api.SynthesisApi;
 import com.smartbracelet.sunny.biz.biz.UploadThread;
@@ -43,6 +44,7 @@ import com.smartbracelet.sunny.model.UserModel;
 import com.smartbracelet.sunny.model.ble.GattAttributes;
 import com.smartbracelet.sunny.model.event.BaseEvent;
 import com.smartbracelet.sunny.model.event.BleConnectEvent;
+import com.smartbracelet.sunny.model.event.DataUploadEvent;
 import com.smartbracelet.sunny.service.BluetoothLeService;
 import com.smartbracelet.sunny.ui.user.CheckItemActivity;
 import com.smartbracelet.sunny.utils.CRC8;
@@ -126,6 +128,7 @@ public class HomeFragment extends BaseFragment {
     private String bloothPressureType = "bloothPressure";
     private String bloothPressureTime = null;
     private String mElectronic = "";
+    private String mChargeState;//充电状态
 
     private String heartBeatValue = null;
     private String breathPressureValue = null;
@@ -509,22 +512,25 @@ public class HomeFragment extends BaseFragment {
 
         String[] values = data.split(" ");
 
-        //低位在前，高位在后
+        //高位在前，低位在后
         //计步
-        int step = Integer.parseInt(values[1], 16) * 256//低位
-                + Integer.valueOf(values[2], 16);//高位
+        int step = Integer.parseInt(values[4], 16) * 256//低位
+                + Integer.valueOf(values[5], 16);//高位
 
         //心率
         int heartRate = Integer.parseInt(values[6], 16) * 256
-                + Integer.parseInt(values[5], 16);
+                + Integer.parseInt(values[7], 16);
 
         //取出电量
-        int electronic = Integer.parseInt(values[7], 16);
+        int electronic = Integer.parseInt(values[8], 16);
 
         //血压
         //因为血压最大值不会超过一位，所以高位，低位分别表示收缩压与收张压
-        int bloothMax = Integer.parseInt(values[9], 16);
-        int bloothMin = Integer.parseInt(values[10], 16);
+        int bloothMax = Integer.parseInt(values[10], 16);
+        int bloothMin = Integer.parseInt(values[11], 16);
+
+        //USB充电状态
+        int chargeState = Integer.parseInt(values[9], 16);
 
 
         bloothPressureMax = String.valueOf(bloothMax);
@@ -532,13 +538,61 @@ public class HomeFragment extends BaseFragment {
         heartBeatValue = String.valueOf(heartRate);
         stepPressureValue = String.valueOf(step);
         mElectronic = String.valueOf(electronic);
+        mChargeState = chargeState == 0 ? "未充电" : "充电中";
 
-        LogUtils.e("最大血压：" + bloothPressureMax + "\n最低血压:" + bloothPressureMin + "\n心率:" + heartBeatValue + "\n计步:" + stepPressureValue + "\n电量:" + mElectronic);
+        LogUtils.e("最大血压：" + bloothPressureMax +
+                "\n最低血压:" + bloothPressureMin +
+                "\n心率:" + heartBeatValue +
+                "\n计步:" + stepPressureValue +
+                "\n充电状态：" + mChargeState +
+                "\n电量:" + mElectronic);
 
         //刷新UI，显示电量信息
         freshElectronicUI(electronic);
 
 
+        boolean isGoNet = CommSharePreferencesUtil.getBoolean(mContext, AppConstant.CONNECT_MODE);
+        if (isGoNet) {
+            goNetWorkMode();
+        } else {
+            goLocalModel();
+        }
+
+    }
+
+    /**
+     * 走单机模式，直接刷新UI
+     */
+    private void goLocalModel() {
+
+        freshUIRightNow();
+
+    }
+
+    /**
+     * 立即刷新界面
+     */
+    private void freshUIRightNow() {
+        mBloothPressureTime.setText(bloothPressureTime);
+        mBloothPressureValue.setText(bloothPressureMax + "/" + bloothPressureMin);
+
+        mHeartRateTime.setText(bloothPressureTime);
+        mHeartValue.setText(heartBeatValue);
+
+        mBreathRateTime.setText(bloothPressureTime);
+        mBreathRateValue.setText(breathPressureValue);
+
+        mTiredTime.setText(bloothPressureTime);
+        mTiredValue.setText(tiredPressureValue);
+
+        mMoodTime.setText(bloothPressureTime);
+        mMoodValue.setText(stepValue);
+    }
+
+    /**
+     * 走联网模式，上传至服务器
+     */
+    private void goNetWorkMode() {
         try
 
         {
@@ -556,7 +610,6 @@ public class HomeFragment extends BaseFragment {
         {
             e.printStackTrace();
         }
-
     }
 
     private void freshElectronicUI(int electronic) {
@@ -635,8 +688,9 @@ public class HomeFragment extends BaseFragment {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 0:
-                    //成功
+                    //成功，立即刷新界面
                     LogUtils.e("数据上传成功。。。。");
+                    EventBus.getDefault().post(new DataUploadEvent());
                     break;
                 case 1:
                     //失败
@@ -646,6 +700,9 @@ public class HomeFragment extends BaseFragment {
         }
     };
 
+    public void onEventMainThread(DataUploadEvent event) {
+        freshUIRightNow();
+    }
 
     /**
      * 来控制首页item项的显示 与隐藏

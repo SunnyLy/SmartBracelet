@@ -9,7 +9,8 @@ import java.util.SimpleTimeZone;
 public class AppConstant {
 
     public static final String INNER_HOST = "192.168.1.1:8080";
-    public static final String OUTER_HOST = "221.238.131.134:8181";
+    //public static final String OUTER_HOST = "221.238.131.134:8181";
+    public static final String OUTER_HOST = "192.168.0.88:8080";
     public static final String HTTP = "http://";
     public static final String HTTPS = "https://";
 
@@ -58,6 +59,8 @@ public class AppConstant {
     //App版本检查
     public static final String GET_APP_VERSION_ACTION = "getAppVersion.action";
 
+    //联网模式
+    public static final String CONNECT_MODE = "netWorkChange";
 
     // 分享-Wechat：已是最新
     public static final String WeiXinAppID = "wx413e6c049cdaaa14";

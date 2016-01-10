@@ -195,6 +195,10 @@ Tip:     注意: 饮食 低盐、低脂、低胆固醇、低热量的饮食，�
     <!--绑定-->
     <string name="binding">正在绑定……</string>
 
+    <!--切换联网模式-->
+    <string name="connect_mode_no">切换至单机模式</string>
+    <string name="connect_mode_network">切换至联网模式</string>
+
 
 
 
